@@ -1,2 +1,7 @@
 paramiko>=3.4.0
 xmltodict>=0.13.0
+
+# ── Tests (dev) ───────────────────────────────────────────────────────────────
+# Les tests de logique pure (scripts/tests/) ne dépendent ni de paramiko ni de
+# SSH : `pip install -r requirements.txt && pytest` suffit.
+pytest>=8.0.0

@@ -19,6 +19,11 @@ back/.env
 __pycache__/
 *.pyc
 
+# Tests
+.pytest_cache/
+scripts/.venv*/
+front/coverage/
+
 # Misc
 .DS_Store
 *.log
