@@ -5,6 +5,23 @@ import type {
 } from '../../types/vtom'
 import { softenColor, getStatusIcon } from '../../utils/vtomColors'
 import { isCommentNearApp, cleanHtmlLabel, wrapText, clipToRect } from '../../utils/vtomHelpers'
+import type { DocAnnotation, DocArrow } from '../../types/planDoc'
+import type { EditTool } from '../../hooks/usePlanDocs'
+import { AnnotationLayer } from './AnnotationLayer'
+
+/** Props du calque documentaire superposé au plan (optionnel). */
+export interface DocLayerProps {
+  annotations: DocAnnotation[]
+  arrows: DocArrow[]
+  editMode: boolean
+  tool: EditTool
+  arrowFrom: string | null
+  onPlaceAnnotation: (x: number, y: number) => void
+  onMoveAnnotation: (uid: string, x: number, y: number) => void
+  onEditAnnotation: (uid: string) => void
+  onDeleteAnnotation: (uid: string) => void
+  onAnnotationClick: (uid: string) => void
+}
 
 interface Props {
   applications: ApplicationNode[]
@@ -28,6 +45,7 @@ interface Props {
   onCommentMouseEnter: (index: number) => void
   onCommentMouseLeave: () => void
   svgRef: React.RefObject<SVGSVGElement | null>
+  docLayer?: DocLayerProps
 }
 
 const APP_H = 55
@@ -44,7 +62,7 @@ export function PlanSvgCanvas({
   onMouseDown, onMouseMove, onMouseUp,
   onAppClick, onAppMouseEnter, onAppMouseLeave,
   onCommentMouseEnter, onCommentMouseLeave,
-  svgRef,
+  svgRef, docLayer,
 }: Props) {
   // Index O(1) utilisés dans les boucles de render pour éviter applications.find / links.some
   // qui dégénèrent en O(L×A) sur les hovers.
@@ -105,6 +123,24 @@ export function PlanSvgCanvas({
 
   const lineColor = isDark ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.45)'
 
+  // En mode "ajout d'annotation", un clic sur le fond pose une annotation
+  // (dans le repère du groupe translaté) au lieu de démarrer un pan.
+  const handleSvgMouseDown = (e: React.MouseEvent<SVGSVGElement>) => {
+    if (docLayer?.editMode && docLayer.tool === 'annotation') {
+      const svg = svgRef.current
+      const ctm = svg?.getScreenCTM()
+      if (svg && ctm) {
+        const pt = svg.createSVGPoint()
+        pt.x = e.clientX
+        pt.y = e.clientY
+        const p = pt.matrixTransform(ctm.inverse())
+        docLayer.onPlaceAnnotation(p.x - leftOffset, p.y)
+        return
+      }
+    }
+    onMouseDown(e)
+  }
+
   return (
     <svg
       ref={svgRef}
@@ -112,7 +148,7 @@ export function PlanSvgCanvas({
       width={CANVAS_W * scale}
       height={CANVAS_H * scale}
       viewBox={`0 0 ${CANVAS_W} ${CANVAS_H}`}
-      onMouseDown={onMouseDown}
+      onMouseDown={handleSvgMouseDown}
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
@@ -409,6 +445,24 @@ export function PlanSvgCanvas({
             </g>
           )
         })}
+
+        {/* Calque documentaire (annotations + flèches) */}
+        {docLayer && (
+          <AnnotationLayer
+            annotations={docLayer.annotations}
+            arrows={docLayer.arrows}
+            appByName={appByName}
+            editMode={docLayer.editMode}
+            tool={docLayer.tool}
+            arrowFrom={docLayer.arrowFrom}
+            leftOffset={leftOffset}
+            svgRef={svgRef}
+            onMoveAnnotation={docLayer.onMoveAnnotation}
+            onEditAnnotation={docLayer.onEditAnnotation}
+            onDeleteAnnotation={docLayer.onDeleteAnnotation}
+            onAnnotationClick={docLayer.onAnnotationClick}
+          />
+        )}
       </g>
     </svg>
   )

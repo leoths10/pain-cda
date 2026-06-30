@@ -122,11 +122,38 @@ npm run test:watch  # mode watch (dev)
 
 ---
 
-## Suite prévue (hors étape 1)
+## Étape 2 — Tests d'intégration backend (couche documentaire)
 
-- **Étape 2 — Tests d'intégration backend** : endpoints Laravel (`/api/vtom/*`,
-  `/api/auth/*`) avec PHPUnit/Pest, LDAP et SSH mockés.
-- **Étape 2 — Tests de composants frontend** : Testing Library + jsdom sur un
-  composant clé (formulaire, modale de recherche).
-- **Étape 4 — Intégration continue** : exécution automatique de `pytest` +
-  `vitest` à chaque push (GitHub Actions).
+Suite **PHPUnit Feature** sur les endpoints `/api/plan-docs/*`, base **SQLite en
+mémoire** (`RefreshDatabase`), authentification simulée via `Sanctum::actingAs`
+(pas de LDAP réel). Fichier : `back/tests/Feature/PlanDocApiTest.php`.
+
+> `phpunit.xml` force SQLite (`force="true"` sur `DB_CONNECTION`/`DB_DATABASE`)
+> pour que les tests ne visent **jamais** la base PostgreSQL réelle.
+
+**Lancement :** `php artisan test` (ou `docker compose exec pain-back php artisan test`).
+**12 tests, 37 assertions, 100 % au vert.**
+
+| # | Cas | Attendu | Statut |
+|---|-----|---------|:------:|
+| F1 | Accès non authentifié | 401 | ✅ |
+| F2 | Création d'un calque + tags (n-n) | 201, tags persistés | ✅ |
+| F3 | Création sans titre | 422 | ✅ |
+| F4 | Liste des calques | 200, 2 éléments | ✅ |
+| F5 | Lecture d'un calque | 200, champs corrects | ✅ |
+| F6 | Lecture d'un calque inexistant | 404 | ✅ |
+| F7 | Sauvegarde annotations + flèches | persistées, `from_uid` restitué | ✅ |
+| F8 | La sauvegarde remplace le contenu | ancien contenu supprimé | ✅ |
+| F9 | Flèche orpheline (source inconnue) | ignorée | ✅ |
+| F10 | Type de cible invalide | 422 | ✅ |
+| F11 | Suppression → cascade | annotations/flèches supprimées | ✅ |
+| F12 | Endpoint `/api/tags` | 200, tags listés | ✅ |
+
+---
+
+## Suite prévue
+
+- **Tests de composants frontend** : Testing Library + jsdom sur un composant clé
+  (toolbar documentaire, modale de recherche).
+- **Intégration continue** : exécution automatique de `pytest` + `vitest` +
+  `php artisan test` à chaque push (GitHub Actions).

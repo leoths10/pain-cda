@@ -2717,3 +2717,75 @@
 :root[data-theme='dark'] .app-tooltip__hint {
   color: #4b5563;
 }
+
+/* ── Couche documentaire : barre d'outils flottante ───────────────────────── */
+.doc-toolbar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--vtom-surface, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  font-size: 13px;
+  max-width: 420px;
+}
+.doc-toolbar__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.doc-toolbar__title {
+  font-weight: 700;
+  margin-right: 2px;
+}
+.doc-toolbar__select {
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--vtom-surface, #fff);
+  color: inherit;
+  max-width: 180px;
+}
+.doc-toolbar__btn {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(0, 0, 0, 0.03);
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.doc-toolbar__btn:hover { background: rgba(0, 0, 0, 0.08); }
+.doc-toolbar__btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.doc-toolbar__btn--active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
+.doc-toolbar__btn--save { background: #10b981; border-color: #10b981; color: #fff; }
+.doc-toolbar__btn--save:hover:not(:disabled) { background: #059669; }
+.doc-toolbar__btn--danger { background: #ef4444; border-color: #ef4444; color: #fff; }
+.doc-toolbar__sep {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 0 2px;
+}
+.doc-toolbar__hint { color: var(--vtom-text-muted, #64748b); font-size: 12px; }
+.doc-toolbar__error { color: #ef4444; font-size: 12px; font-weight: 600; }
+
+:root[data-theme='dark'] .doc-toolbar {
+  background: #1e2433;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+:root[data-theme='dark'] .doc-toolbar__btn { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.15); }
+:root[data-theme='dark'] .doc-toolbar__btn:hover { background: rgba(255, 255, 255, 0.12); }
+:root[data-theme='dark'] .doc-toolbar__select { background: #1e2433; border-color: rgba(255, 255, 255, 0.2); }

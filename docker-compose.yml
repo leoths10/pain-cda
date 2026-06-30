@@ -53,8 +53,6 @@ services:
     build:
       context: ./back
       dockerfile: Dockerfile
-      cache_from:
-        - pain-back-base
     container_name: pain-back
     env_file:
       - ./back/.env

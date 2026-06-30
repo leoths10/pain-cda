@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DocumentationController;
 use App\Http\Controllers\VtomController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,3 +42,18 @@ Route::prefix('vtom')->controller(VtomController::class)
         Route::get('/migrado-xml',          'getMigradoXml');
         Route::get('/paysage-version',      'getPaysageVersion');
     });
+
+// ── Couche documentaire : calques d'annotation (protégées par Sanctum) ────────
+Route::prefix('plan-docs')->controller(DocumentationController::class)
+    ->middleware('auth:sanctum')
+    ->group(function () {
+        Route::get('/',             'index');
+        Route::get('/stats',        'stats');        // avant /{id} pour ne pas être capturé
+        Route::post('/',            'store');
+        Route::get('/{id}',         'show')->whereNumber('id');
+        Route::put('/{id}',         'updateMeta')->whereNumber('id');
+        Route::put('/{id}/content', 'saveContent')->whereNumber('id');
+        Route::delete('/{id}',      'destroy')->whereNumber('id');
+    });
+
+Route::get('/tags', [DocumentationController::class, 'tags'])->middleware('auth:sanctum');

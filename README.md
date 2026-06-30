@@ -740,38 +740,20 @@ Trois services orchestrés par `docker-compose.yml` :
 
 Ordre de démarrage : `pain-db` (healthcheck `pg_isready`) → `pain-back` (migrations auto) → `pain-front` (build React) → `pain-nginx`.
 
-### Déploiement sur machine sans accès internet (image de base)
+### Build
 
-Le backend utilise une image de base pré-construite (`localhost/pain-back-base`) qui embarque toutes les dépendances lourdes (PHP, Python, Composer, packages pip). Sur une machine distante sans accès internet, il faut transférer cette image manuellement.
-
-**1. Sur la machine de dev (avec internet) — construire et sauvegarder :**
-
-```bash
-# Construire l'image de base (une seule fois, ou quand les dépendances changent)
-docker build -f back/Dockerfile.base -t localhost/pain-back-base ./back
-
-# Sauvegarder en .tar (sans compression pour éviter les problèmes de décompression)
-docker save localhost/pain-back-base -o pain-back-base.tar
-```
-
-**2. Transférer vers la machine distante :**
+Le build est autonome : chaque service se construit depuis son propre `Dockerfile`,
+sans image de base pré-construite ni étape manuelle.
 
 ```bash
-scp pain-back-base.tar user@10.37.44.221:/home/user/
+docker compose build       # construit back (PHP + Python + Composer) et front (Vite)
+docker compose up -d
 ```
 
-**3. Sur la machine distante — charger et rebuilder :**
-
-```bash
-# Charger l'image dans Docker local
-docker load -i pain-back-base.tar
-
-# Rebuilder le backend (BuildKit doit être désactivé pour utiliser l'image locale)
-DOCKER_BUILDKIT=0 docker compose build pain-back
-docker compose up -d pain-back
-```
-
-> Le `Dockerfile` principal (`back/Dockerfile`) part de `localhost/pain-back-base` et n'exécute que `composer dump-autoload` — aucune connexion internet requise.
+Le `back/Dockerfile` installe les extensions PHP (PostgreSQL, LDAP), les dépendances
+Python des scripts VTOM, puis `composer install`. Le `front/Dockerfile` fait
+`npm install` puis `npm run build`. Un accès internet est requis au moment du build
+pour télécharger les dépendances.
 
 ---
 

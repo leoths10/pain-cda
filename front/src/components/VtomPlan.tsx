@@ -33,6 +33,8 @@ import { AppSearchModal } from './vtom/modals/AppSearchModal'
 import { JobSearchModal } from './vtom/modals/JobSearchModal'
 import { ChaineBatchPanel } from './vtom/ChaineBatchPanel'
 import { PlanLegend } from './vtom/PlanLegend'
+import { DocToolbar } from './vtom/DocToolbar'
+import { usePlanDocs } from '../hooks/usePlanDocs'
 
 import { apiFetch } from '../utils/apiFetch'
 import '../styles/VtomPlan.css'
@@ -60,6 +62,11 @@ function VtomPlan() {
   const viewport = useVtomViewport()
   const scripts = useVtomScripts(applications)
   const tooltip = useVtomTooltip()
+  const docs = usePlanDocs()
+
+  // Charge la liste des calques documentaires au montage.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { docs.loadList() }, [])
 
   // ── UI state ─────────────────────────────────────────────────────────────
   const [hoveredApp, setHoveredApp] = useState<string | null>(null)
@@ -127,6 +134,9 @@ function VtomPlan() {
 
   const handleAppClick = (app: ApplicationNode, e: React.MouseEvent) => {
     e.stopPropagation()
+    // En mode flèche, un clic sur une application complète la flèche en cours
+    // au lieu d'ouvrir la fiche détaillée.
+    if (docs.editMode && docs.tool === 'arrow' && docs.completeArrowToApp(app.name)) return
     setSelectedApp({ app, mouseX: e.clientX, mouseY: e.clientY })
   }
 
@@ -322,6 +332,7 @@ ${serialized}
               />
 
               <div className="vtom-plan-canvas">
+                <DocToolbar docs={docs} />
                 <div
                   ref={viewport.scrollContainerRef}
                   className="vtom-scroll-container"
@@ -349,6 +360,18 @@ ${serialized}
                     onCommentMouseEnter={setHoveredComment}
                     onCommentMouseLeave={() => setHoveredComment(null)}
                     svgRef={svgRef}
+                    docLayer={docs.currentDoc ? {
+                      annotations: docs.annotations,
+                      arrows: docs.arrows,
+                      editMode: docs.editMode,
+                      tool: docs.tool,
+                      arrowFrom: docs.arrowFrom,
+                      onPlaceAnnotation: docs.addAnnotation,
+                      onMoveAnnotation: docs.moveAnnotation,
+                      onEditAnnotation: docs.editAnnotationText,
+                      onDeleteAnnotation: docs.deleteAnnotation,
+                      onAnnotationClick: docs.onAnnotationClickArrow,
+                    } : undefined}
                   />
                 </div>
 
