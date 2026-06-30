@@ -1,0 +1,28 @@
+# Node / frontend
+front/node_modules
+front/dist
+
+# PHP / backend
+back/vendor
+back/storage/*.key
+back/storage/logs
+back/storage/framework/cache
+back/storage/framework/sessions
+back/storage/framework/views
+
+# Environment files
+.env
+front/.env
+back/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Misc
+.DS_Store
+*.log
+*.local
+.idea
+.vscode
+

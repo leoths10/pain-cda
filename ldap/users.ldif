@@ -1,0 +1,67 @@
+dn: ou=users,dc=example,dc=fr
+objectClass: organizationalUnit
+ou: users
+
+dn: cn=employes,dc=example,dc=fr
+objectClass: groupOfNames
+cn: employes
+member: uid=dev,ou=users,dc=example,dc=fr
+member: uid=rouen,ou=users,dc=example,dc=fr
+member: uid=chalons,ou=users,dc=example,dc=fr
+member: uid=grenoble,ou=users,dc=example,dc=fr
+member: uid=tours,ou=users,dc=example,dc=fr
+member: uid=bsi6,ou=users,dc=example,dc=fr
+
+dn: uid=dev,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: Dev
+sn: Dev
+uid: dev
+userPassword: dev
+
+dn: uid=rouen,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: Rouen
+sn: Rouen
+uid: rouen
+userPassword: rouen
+
+dn: uid=chalons,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: Chalons
+sn: Chalons
+uid: chalons
+userPassword: chalons
+
+dn: uid=grenoble,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: Grenoble
+sn: Grenoble
+uid: grenoble
+userPassword: grenoble
+
+dn: uid=tours,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: Tours
+sn: Tours
+uid: tours
+userPassword: tours
+
+dn: uid=bsi6,ou=users,dc=example,dc=fr
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: bsi6
+sn: bsi6
+uid: bsi6
+userPassword: bsi6

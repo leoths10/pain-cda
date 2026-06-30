@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=FR, ST=Ile-de-France, L=Noisiel, O=DGFiP, CN=vmiigsi001.b0197/emailAddress=esi.noisiel.iria@dgfip.finances.gouv.fr
+        Validity
+            Not Before: Jun  1 10:00:30 2017 GMT
+            Not After : May 30 10:00:30 2027 GMT
+        Subject: C=FR, ST=Ile-de-France, L=Noisiel, O=DGFiP, CN=vmiigsi001.b0197_pay/emailAddress=esi.noisiel.iria@dgfip.finances.gouv.fr
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:a2:de:61:2a:74:9f:2e:85:50:83:76:89:94:f2:
+                    43:9f:2d:18:c6:9f:10:d9:33:37:38:ff:20:19:7c:
+                    e2:e0:53:65:a1:42:a5:bf:77:d2:ff:14:93:39:72:
+                    f1:75:a4:e0:f2:eb:c4:88:8e:fb:b9:3c:5d:cc:91:
+                    42:d6:6b:7b:cf:0d:37:f8:ca:aa:bc:e5:9c:cc:0c:
+                    aa:58:bf:ad:8b:a6:d7:a7:09:f9:7f:d4:d9:6e:36:
+                    18:0f:26:c4:7b:f4:25:cc:6e:a0:ca:3c:20:ba:68:
+                    fc:e4:8a:7f:c9:a5:a4:b3:fe:ac:f1:8c:00:3e:8d:
+                    36:e8:58:9e:72:0b:42:0a:db
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                31:84:55:0B:6F:99:E3:95:F4:87:99:17:B3:21:BD:F1:31:8D:F7:B7
+            X509v3 Authority Key Identifier: 
+                keyid:E9:F9:EA:18:ED:F2:90:4E:34:C4:3A:CD:CD:9F:E5:DD:6F:97:1F:DA
+                DirName:/C=FR/ST=Ile-de-France/L=Noisiel/O=DGFiP/CN=vmiigsi001.b0197/emailAddress=esi.noisiel.iria@dgfip.finances.gouv.fr
+                serial:F3:F9:65:71:CE:F8:34:CA
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+         43:0e:89:7a:46:68:1c:fd:be:d5:31:9b:d1:f2:d0:19:b8:4b:
+         9a:eb:fd:19:3b:b4:30:59:75:43:0d:de:1e:56:10:ee:15:22:
+         68:f7:e3:97:72:78:b5:59:5e:35:34:98:cd:65:ec:50:a5:09:
+         33:1d:85:f7:30:f0:12:67:0e:58:72:10:61:75:39:37:d2:22:
+         74:22:1e:13:26:57:39:c1:48:cc:27:1c:92:ab:6e:bf:16:39:
+         ff:89:5a:13:06:82:e7:4f:66:58:2e:67:6e:ea:30:10:05:7b:
+         66:19:bf:e8:2e:70:1b:66:da:18:b6:a6:ce:64:16:65:9b:5e:
+         b3:bd
+-----BEGIN CERTIFICATE-----
+MIIEAzCCA2ygAwIBAgIBAjANBgkqhkiG9w0BAQUFADCBmjELMAkGA1UEBhMCRlIx
+FjAUBgNVBAgTDUlsZS1kZS1GcmFuY2UxEDAOBgNVBAcTB05vaXNpZWwxDjAMBgNV
+BAoTBURHRmlQMRkwFwYDVQQDExB2bWlpZ3NpMDAxLmIwMTk3MTYwNAYJKoZIhvcN
+AQkBFidlc2kubm9pc2llbC5pcmlhQGRnZmlwLmZpbmFuY2VzLmdvdXYuZnIwHhcN
+MTcwNjAxMTAwMDMwWhcNMjcwNTMwMTAwMDMwWjCBnjELMAkGA1UEBhMCRlIxFjAU
+BgNVBAgTDUlsZS1kZS1GcmFuY2UxEDAOBgNVBAcTB05vaXNpZWwxDjAMBgNVBAoT
+BURHRmlQMR0wGwYDVQQDFBR2bWlpZ3NpMDAxLmIwMTk3X3BheTE2MDQGCSqGSIb3
+DQEJARYnZXNpLm5vaXNpZWwuaXJpYUBkZ2ZpcC5maW5hbmNlcy5nb3V2LmZyMIGf
+MA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCi3mEqdJ8uhVCDdomU8kOfLRjGnxDZ
+Mzc4/yAZfOLgU2WhQqW/d9L/FJM5cvF1pODy68SIjvu5PF3MkULWa3vPDTf4yqq8
+5ZzMDKpYv62LptenCfl/1NluNhgPJsR79CXMbqDKPCC6aPzkin/JpaSz/qzxjAA+
+jTboWJ5yC0IK2wIDAQABo4IBUTCCAU0wCQYDVR0TBAIwADAtBglghkgBhvhCAQ0E
+IBYeRWFzeS1SU0EgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQxhFUL
+b5njlfSHmRezIb3xMY33tzCBzwYDVR0jBIHHMIHEgBTp+eoY7fKQTjTEOs3Nn+Xd
+b5cf2qGBoKSBnTCBmjELMAkGA1UEBhMCRlIxFjAUBgNVBAgTDUlsZS1kZS1GcmFu
+Y2UxEDAOBgNVBAcTB05vaXNpZWwxDjAMBgNVBAoTBURHRmlQMRkwFwYDVQQDExB2
+bWlpZ3NpMDAxLmIwMTk3MTYwNAYJKoZIhvcNAQkBFidlc2kubm9pc2llbC5pcmlh
+QGRnZmlwLmZpbmFuY2VzLmdvdXYuZnKCCQDz+WVxzvg0yjATBgNVHSUEDDAKBggr
+BgEFBQcDAjALBgNVHQ8EBAMCB4AwDQYJKoZIhvcNAQEFBQADgYEAQw6JekZoHP2+
+1TGb0fLQGbhLmuv9GTu0MFl1Qw3eHlYQ7hUiaPfjl3J4tVleNTSYzWXsUKUJMx2F
+9zDwEmcOWHIQYXU5N9IidCIeEyZXOcFIzCcckqtuvxY5/4laEwaC509mWC5nbuow
+EAV7Zhm/6C5wG2baGLamzmQWZZtes70=
+-----END CERTIFICATE-----

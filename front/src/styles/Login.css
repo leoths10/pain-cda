@@ -1,0 +1,343 @@
+/* ── Login page ─────────────────────────────────────────────────────────────── */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 0, 145, 0.35), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(225, 0, 15, 0.25), transparent 35%),
+    #000020;
+  transition: background var(--theme-transition-duration, 0.8s) ease;
+  animation: fadeSlideIn 0.45s ease both;
+}
+
+.login-page--dark {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 0, 80, 0.5), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(150, 0, 10, 0.35), transparent 35%),
+    #00000f;
+}
+
+/* Toggle thème en haut à droite */
+.login-theme-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 10;
+}
+
+/* ── Carte centrale ──────────────────────────────────────────────────────────── */
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 100, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  overflow: hidden;
+}
+
+/* En-tête */
+.login-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 2rem 2rem 1.5rem;
+  background: linear-gradient(120deg, var(--color-bleu-france-dark), var(--color-bleu-france) 60%, var(--color-bleu-france-light));
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card__header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(106, 76, 255, 0.4), transparent 50%);
+  pointer-events: none;
+}
+
+.login-card__logo {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.login-card__logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.login-card__titles {
+  position: relative;
+  z-index: 1;
+}
+
+.login-card__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.15rem;
+}
+
+.login-card__title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.login-card__subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.25rem 0 0;
+  line-height: 1.4;
+}
+
+/* Bandeau tricolore */
+.login-tricolor {
+  display: flex;
+  height: 4px;
+}
+
+.login-tricolor__bleu  { flex: 1; background: var(--color-bleu-france); }
+.login-tricolor__blanc { flex: 1; background: #ffffff; }
+.login-tricolor__rouge { flex: 1; background: var(--color-rouge-france); }
+
+/* ── Formulaire ──────────────────────────────────────────────────────────────── */
+
+.login-form {
+  padding: 1.75rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.login-form__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* Champ */
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.login-field__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.login-field__input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f4f6fb;
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  -webkit-appearance: none;
+}
+
+.login-field__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-field__input:focus {
+  border-color: var(--color-bleu-france-light);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(106, 106, 244, 0.25);
+}
+
+.login-field__input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Wrap mot de passe */
+.login-field__password-wrap {
+  position: relative;
+}
+
+.login-field__password-wrap .login-field__input {
+  padding-right: 2.8rem;
+}
+
+.login-field__eye {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.login-field__eye:hover {
+  opacity: 1;
+}
+
+/* Message d'erreur */
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(225, 0, 15, 0.12);
+  border: 1px solid rgba(225, 0, 15, 0.3);
+  border-radius: 0.55rem;
+  color: #ff8080;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+/* Bouton submit */
+.login-submit {
+  margin-top: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: linear-gradient(130deg, var(--color-bleu-france), var(--color-bleu-france-light));
+  color: #fff;
+  font-size: 0.93rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(0, 0, 145, 0.4);
+}
+
+.login-submit:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 0, 145, 0.55);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.login-submit__spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: loginSpin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes loginSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer de la carte */
+.login-card__footer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  padding: 0.85rem 2rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ── Adaptations thème clair ────────────────────────────────────────────────── */
+
+[data-theme="light"] .login-page {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 0, 145, 0.12), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(225, 0, 15, 0.08), transparent 35%),
+    #e8eaf6;
+}
+
+[data-theme="light"] .login-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 145, 0.15);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 100, 0.15),
+    0 0 0 1px rgba(0, 0, 145, 0.08) inset;
+}
+
+[data-theme="light"] .login-form__title {
+  color: #1a1a4e;
+}
+
+[data-theme="light"] .login-field__label {
+  color: rgba(0, 0, 100, 0.6);
+}
+
+[data-theme="light"] .login-field__input {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 145, 0.2);
+  color: #1a1a4e;
+}
+
+[data-theme="light"] .login-field__input::placeholder {
+  color: rgba(0, 0, 80, 0.3);
+}
+
+[data-theme="light"] .login-field__input:focus {
+  background: #fff;
+  border-color: var(--color-bleu-france);
+  box-shadow: 0 0 0 3px rgba(0, 0, 145, 0.12);
+}
+
+[data-theme="light"] .login-field__eye {
+  filter: invert(1) brightness(0.4);
+}
+
+[data-theme="light"] .login-error {
+  background: rgba(225, 0, 15, 0.07);
+  color: #b0000a;
+}
+
+[data-theme="light"] .login-card__footer {
+  color: rgba(0, 0, 100, 0.4);
+  border-top-color: rgba(0, 0, 145, 0.1);
+}

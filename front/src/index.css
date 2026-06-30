@@ -1,0 +1,43 @@
+:root {
+  /* Variables typographiques globales appliquées sur tous les composants */
+  font-family: 'Marianne', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --theme-transition-duration: 0.8s;
+  
+  /* Couleurs du drapeau français */
+  --color-bleu-france: #000091;
+  --color-blanc-france: #FFFFFF;
+  --color-rouge-france: #E1000F;
+  
+  /* Variations pour les interfaces */
+  --color-bleu-france-light: #6A6AF4;
+  --color-bleu-france-dark: #000074;
+  --color-rouge-france-light: #FF5C6B;
+  --color-rouge-france-dark: #C1000D;
+}
+
+/* Reset minimal, partagé par toutes les feuilles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* Fond aux couleurs de la France avec dégradé subtil */
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 15% 20%, rgba(0, 0, 145, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(225, 0, 15, 0.12), transparent 35%),
+    linear-gradient(135deg, #000074, #000091 40%, #6A6AF4 70%, #E1000F);
+  transition: background var(--theme-transition-duration, 0.8s) ease;
+}
+
+#root {
+  /* Permet à la page React d'occuper toute la hauteur */
+  min-height: 100vh;
+}

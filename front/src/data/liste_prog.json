@@ -1,0 +1,3050 @@
+{
+    "PISTE-AUDIT": {
+        "﻿\"PISTE-AUDIT\"": {}
+    },
+    "AVANT-PASSAGES": {
+        "INTRETOURAVPASSA": {}
+    },
+    "DRETCHORUSBTI-LOT4": {
+        "CHORUS-BTI": {}
+    },
+    "DRETCHORUSBTIBR-RECYCLAGE": {
+        "CHORUS-BTI": {}
+    },
+    "AVANCES-PSA": {
+        "AVANCES-PSA": {}
+    },
+    "MSTATMENSUELL": {
+        "MSTATMENSUELL": {}
+    },
+    "DRETCHORUSBTI-LOT3": {
+        "CHORUS-BTI": {}
+    },
+    "SYNCHRO-ZOS-12": {
+        "PREPA-FIC-ZOS": {},
+        "INTRETOURFINM12": {}
+    },
+    "RECALL": {
+        "RECALL": {}
+    },
+    "SECUCHORTAV": {
+        "SECU-TAV": {}
+    },
+    "CHORUS-052": {
+        "CHORUS-052": {}
+    },
+    "PAIR-DEMANDE": {
+        "PREPA-FIC-ZOS": {}
+    },
+    "MAJ-PS": {
+        "MAJ-DEFINITIVE-PP": {},
+        "MAJ-PS": {},
+        "CONTROLMETIERPP": {},
+        "SIGNPP": {},
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "RETENUES-PSA": {
+        "RETENUES-PSA": {}
+    },
+    "IRL-PSA": {
+        "IRL-PSA": {}
+    },
+    "PASSAGE-JOURN-PP": {
+        "CONTROLMETIERPP": {},
+        "SIGNPP": {},
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "ENV-CHORUS2-LOT2": {
+        "CHORC": {}
+    },
+    "MCOMPTABULTIN-12": {
+        "MCOMPTAFIC12": {}
+    },
+    "TRANSFERT-DSN": {
+        "TRANSFERT-DSN": {
+            "FICXDSNB": [
+                "PAICSYS",
+                "PAIXDSNB",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MCOMPTABULTIN": {
+        "INTRETOURAPCOMPTA": {
+            "INTRETOURMG01PERHP": [
+                "PAICSYS",
+                "PAIRK3BHP",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERYD": [
+                "PAICSYS",
+                "PAIYD",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERSA": [
+                "PAICSYS",
+                "PAISKQSA",
+                "PAIESYS"
+            ],
+            "INTRETOURJ999PERSG": [
+                "PAICSYS",
+                "PAISG",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFHR": [
+                "PAICSYS",
+                "PAIFHR",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFHF": [
+                "PAICSYS",
+                "PAIFHF",
+                "PAIESYS"
+            ],
+            "INTRETOURJ400SAVUHABY": [
+                "PAICSYS",
+                "PAIUHA",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFHG": [
+                "PAICSYS",
+                "PAIFHG",
+                "PAIESYS"
+            ]
+        },
+        "MCOMPTABULTIN": {
+            "PAQMCMPA": [
+                "PAICSYS",
+                "PAISKA",
+                "PAISKAC",
+                "PAISKAG",
+                "PAIESYS"
+            ],
+            "PAQMCMPB": [
+                "PAICSYS",
+                "PAISKC3",
+                "PAISKGP",
+                "PAISKL",
+                "PAISKND",
+                "PAISKNE",
+                "PAISKNF",
+                "PAIESYS"
+            ],
+            "PAQMCMPC": [
+                "PAICSYS",
+                "PAISKC3",
+                "PAISKGP",
+                "PAIFP1C3",
+                "PAISKG2",
+                "PAISKG2C",
+                "PAISKG4",
+                "PAISKG4C",
+                "PAISKL",
+                "PAISKND",
+                "PAISKNE",
+                "PAISKNF",
+                "PAISKCED",
+                "PAISKNEW",
+                "PAISKNFW",
+                "PAIESYS"
+            ],
+            "PAQMCMPD": [
+                "PAICSYS",
+                "PAIFUSKN",
+                "PAISKK",
+                "PAIPBP4",
+                "PAISKKC",
+                "PAIPBP5",
+                "PAISKW2",
+                "PAIPBP6",
+                "PAISKG2A",
+                "PAISKG2",
+                "PAISKG2C",
+                "PAISKG4",
+                "PAISKG4C",
+                "PAISKIS",
+                "PAISGC1",
+                "PAISGC",
+                "PAISGC4",
+                "PAISGA",
+                "PAIPBP1",
+                "PAISGACO",
+                "PAIESYS"
+            ],
+            "PAQMCMP2": [
+                "PAICSYS",
+                "PAISKN0",
+                "PAISKZ",
+                "PAIXKJ",
+                "PAIXKJCH",
+                "PAIUHA",
+                "PAISKES",
+                "PAISKED",
+                "PAIUHB",
+                "PAISKE",
+                "PAISKN",
+                "PAISKNX",
+                "PAISKJ",
+                "PAIESYS"
+            ],
+            "PAQMCMP3": [
+                "PAICSYS",
+                "PAISKN1",
+                "PAISKN",
+                "PAISKNY",
+                "PAIVAFDJ",
+                "PAISKQ",
+                "PAISKM",
+                "PAISKP",
+                "PAIXRT",
+                "PAISKT",
+                "PAISKTED",
+                "PAISKV",
+                "PAISKVED",
+                "PAIESYS"
+            ],
+            "PAQMBULT": [
+                "PAICSYS",
+                "PAIRK1N",
+                "PAIRK1R",
+                "PAIUKL",
+                "PAIUJK",
+                "PAIRK3B",
+                "PAIRK1T",
+                "PAIDAPH",
+                "PAIESYS"
+            ],
+            "PAQMDRAP": [
+                "PAICSYS",
+                "PAIRK2E",
+                "PAIRK2N",
+                "PAITWF",
+                "PAIRK2R",
+                "PAIXBQ",
+                "PAIRK2T",
+                "PAIRK2J",
+                "PAIESYS"
+            ],
+            "PAQMRK1J": [
+                "PAICSYS",
+                "PAIRK1J",
+                "PAIESYS"
+            ],
+            "PAQMLND0": [
+                "PAICSYS",
+                "PAIRK1X1",
+                "PAIIVFTG",
+                "PAIRK1Z1",
+                "PAIVAFTG",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1ZAA",
+                "PAIRK7M",
+                "PAIRK40",
+                "PAIRK42",
+                "PAIRK4J",
+                "PAIUNA",
+                "PAIXON",
+                "PAIXONCC",
+                "PAIUNC",
+                "PAIESYS"
+            ],
+            "PAQCONSKAAA": [
+                "PAICSYS",
+                "CONSKAAA",
+                "PAIESYS"
+            ]
+        },
+        "MRETOURCOMPTA": {
+            "PAQRTU01": [
+                "PAICSYS",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIXRTUN",
+                "PAIESYS"
+            ],
+            "PAQMLND1": [
+                "PAICSYS",
+                "PAIK1X01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X",
+                "PAIRK1Z",
+                "PAIK1Z01",
+                "PAIRK1X2",
+                "PAIESYS"
+            ],
+            "PAQMLNDA": [
+                "PAICSYS",
+                "PAISKA01",
+                "PAICKA082",
+                "PAICKA083",
+                "PAICKA084",
+                "PAICKA100",
+                "PAICKA101",
+                "PAICKA102",
+                "PAICKA103",
+                "PAICKA104",
+                "PAICKA105",
+                "PAICKA106",
+                "PAICKA110",
+                "PAICKA111",
+                "PAICKA112",
+                "PAICKA113",
+                "PAICKA114",
+                "PAICKA115",
+                "PAICKA116",
+                "PAICKA117",
+                "PAICKA118",
+                "PAICKA119",
+                "PAICKA120",
+                "PAICKA121",
+                "PAICKA122",
+                "PAICKA123",
+                "PAICKA124",
+                "PAICKA125",
+                "PAICKA126",
+                "PAICKA127",
+                "PAICKA128",
+                "PAICKA129",
+                "PAICKA130",
+                "PAICKA131",
+                "PAICKA132",
+                "PAICKA133",
+                "PAICKA134",
+                "PAICKA135",
+                "PAICKA136",
+                "PAICKA137",
+                "PAICKA138",
+                "PAICKA139",
+                "PAICKA140",
+                "PAICKA141",
+                "PAICKA142",
+                "PAICKA143",
+                "PAICKA144",
+                "PAICKA145",
+                "PAICKA146",
+                "PAICKA147",
+                "PAICKA148",
+                "PAICKA149",
+                "PAICKA150",
+                "PAICKA151",
+                "PAICKA152",
+                "PAICKA153",
+                "PAICKA154",
+                "PAICKA155",
+                "PAICKA156",
+                "PAICKA157",
+                "PAICKA158",
+                "PAICKA159",
+                "PAICKA160",
+                "PAICKA161",
+                "PAICKA162",
+                "PAICKA163",
+                "PAICKA164",
+                "PAICKA165",
+                "PAICKA166",
+                "PAICKA167",
+                "PAIESYS"
+            ],
+            "PAQCFTB1": [
+                "PAICSYS",
+                "PAIXAY",
+                "PAIXFBJ",
+                "PAINUMKA",
+                "PAIXKA01",
+                "PAIESYS"
+            ],
+            "PAQKXSP1": [
+                "PAICSYS",
+                "Pairk44",
+                "Pairk45",
+                "Paixkxun",
+                "Pairk44",
+                "Pairk45",
+                "Paixkxun",
+                "Pairk44",
+                "Pairk45",
+                "Paixkxun",
+                "Pairk44",
+                "Pairk45",
+                "Paixkxun",
+                "PAIESYS"
+            ],
+            "PAQKXRS1": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PAQKASAN": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAIESYS"
+            ],
+            "PAQKATBA": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAIESYS"
+            ],
+            "PAQKAEMP": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAIESYS"
+            ],
+            "PAQENVKAAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "PASSAGE-JOURN-AA-RECYCLAGE-EK": {
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION-POST-IHM": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "CONTROLMETIERAA": {
+            "CONTROLMETIERAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "SIGNAA": {
+            "SIGNAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEGESTION-POST-IHM": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "DRETCHORUSCRI": {
+        "CHORUS-CRI": {}
+    },
+    "DRETCHORUSBTI-LOT2": {
+        "CHORUS-BTI": {}
+    },
+    "PONCTUEL-PAIR": {
+        "PREPA-FIC-ZOS": {}
+    },
+    "DRETCHORUSBTI-AVANCES": {
+        "CHORUS-BTI": {}
+    },
+    "SYNCHRO-I7": {
+        "SYNCHRO-I7": {
+            "PAQSYNCI7": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "RETOURS-SU": {
+        "RETOUR-SU": {
+            "FICRAPSU": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAICEAA",
+                "PAICEAB1HS",
+                "PAICEAB1SR",
+                "PAICEAB1IX",
+                "PAICEAB1V6",
+                "PAIXSH1",
+                "PAIXSR1",
+                "PAIXXI1",
+                "PAIESYS"
+            ],
+            "FICSRHE3": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAIXDA1DA",
+                "PAIXDA1HI",
+                "PAIXDA1BA",
+                "PAIXDA1J5",
+                "PAIENVXSN1",
+                "PAIENVXDE1",
+                "PAIENVXHD1",
+                "PAIESYS"
+            ]
+        }
+    },
+    "AVANCES-CALC": {
+        "INTRETOURAPAVANC": {},
+        "AVANCE-CALC": {}
+    },
+    "GESTION-RETOUR": {
+        "GESTION-RETOURS": {
+            "PAQMGES": [
+                "PAICSYS",
+                "PAICBAA",
+                "PAICBAD",
+                "PAICBAH",
+                "PAICBAI",
+                "PAICBAE",
+                "PAICBAM",
+                "PAIBBWA",
+                "PAICBAP",
+                "PAICBAR",
+                "PAICBAT",
+                "PAICBAX2",
+                "PAICBAX",
+                "PAIXCP",
+                "PAIXLRAG",
+                "PAIESYS"
+            ],
+            "FICMGES1": [
+                "PAICSYS",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLR01",
+                "PAIXLRCF",
+                "PAIESYS"
+            ],
+            "PAQRRECT": [
+                "PAICSYS",
+                "PAIDFHDG",
+                "PAIRPHDG",
+                "PAIESYS"
+            ],
+            "FICRRECT": [
+                "PAICSYS",
+                "PAIXSBAN",
+                "PAIXSBAN",
+                "PAIESYS"
+            ],
+            "FICRGEST": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXDE1",
+                "PAIXDV",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXSN1",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABHD",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEAC",
+                "PAIXJ51",
+                "PAIXDA1DA",
+                "PAIXDA1HI",
+                "PAIXDA1BA",
+                "PAIXDA1J5",
+                "PAIENVXSN1",
+                "PAIENVXDE1",
+                "PAIENVXHD1",
+                "PAIENVXDV1",
+                "PAIESYS"
+            ]
+        }
+    },
+    "ENV-CHORUS1-LOT1": {
+        "CHORA": {}
+    },
+    "COTISATIONS-PSA": {
+        "COTISATIONS-PSA": {}
+    },
+    "CHORUS-034": {
+        "CHORUS-034": {}
+    },
+    "DRETCHORUSBR": {
+        "CHORUS-BR": {}
+    },
+    "REGLEMENTS-IRL": {
+        "INTRETOURIRL": {
+            "INTRETOURJ100SAVEH": [
+                "PAICSYS",
+                "PAIVO",
+                "PAIESYS"
+            ]
+        },
+        "REGLEMENTS-IRL": {
+            "PAQMIRL": [
+                "PAICSYS",
+                "PAIE190",
+                "PAIE192",
+                "PAIRBCK",
+                "PAIRBCH",
+                "PAIRBCO",
+                "PAIRBCN",
+                "PAIRBNKI",
+                "PAIRBNK",
+                "PAIRNLZI",
+                "PAIRNLZ",
+                "PAIESYS"
+            ],
+            "FICMIRL": [
+                "PAICSYS",
+                "PAIE190A",
+                "PAIRBCK",
+                "PAIESYS"
+            ],
+            "ETATMIRL": [
+                "PAICSYS",
+                "PAIE193",
+                "PAIE191",
+                "PAIRBCM",
+                "PAIRBCL",
+                "PAIRBCJ",
+                "PAIRBCI",
+                "PAIRLST",
+                "PAIXRLST",
+                "PAIESYS"
+            ]
+        }
+    },
+    "CTRL-MVT-GEST-AA": {
+        "CONTROLMETIERAA": {
+            "CONTROLMETIERAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "PRODUCTIONPDFBILANANOMALIES": {
+            "PDFVALIDEANOMALIE": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "SIGNAA": {
+            "SIGNAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "PRODUCTIONCSVBILANANOMALIES": {
+            "CSVVALIDEANOMALIE": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "CONTROLMODULEENTREESGEST": {
+            "JOBGEST": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "GESTIONCESSPAYE": {
+            "PRODUCTIONMVTCP": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PRODUCTIONETATCP": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION-POST-IHM": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION-POST-IHM": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "PHASE-SU": {
+        "CARTESU": {
+            "PAQMPHSU": [
+                "PAICSYS",
+                "PAIKF8A",
+                "PAIKF8B",
+                "PAISKEB",
+                "PAIKESU",
+                "PAID2BV",
+                "PAID2CL",
+                "PAID2YL",
+                "PAID2DL",
+                "PAIRPFSP",
+                "PAIDFFRH",
+                "PAIRPFRH",
+                "PAIKF8P",
+                "PAIKF8D",
+                "PAIPHISU",
+                "PAIS106",
+                "PAIS107",
+                "PAIS108",
+                "PAIS109",
+                "PAIKF7DA",
+                "PAIESYS"
+            ],
+            "ETATMPHSU": [
+                "PAICSYS",
+                "PAIKF8BB",
+                "PAISKEC",
+                "PAISKECB",
+                "PAIKERH",
+                "PAID2YLB",
+                "PAID2YLC",
+                "PAIRF8P",
+                "PAIKF7P",
+                "PAIKF7PS",
+                "PAIESYS"
+            ],
+            "PAQMEJDA": [
+                "PAICSYS",
+                "PAIKF8R",
+                "PAYS555",
+                "PAYS556",
+                "PAIEJD6",
+                "PAIEJDA",
+                "PAIESYS"
+            ],
+            "PAQMAJHX": [
+                "PAICSYS",
+                "PAIKF8X",
+                "PAIESYS"
+            ],
+            "PAQSTENT": [
+                "PAICSYS",
+                "PAIDOXS",
+                "PAIDOXT",
+                "PAIDOXV",
+                "PAIDOXW",
+                "PAIESYS"
+            ],
+            "FICSTENT": [
+                "PAICSYS",
+                "PAIXOT",
+                "PAIESYS"
+            ],
+            "PAQMTRP": [
+                "PAICSYS",
+                "PAIJAV3",
+                "PAIKF8G",
+                "PAIRBIC",
+                "PAIRK1E",
+                "PAIRK1H",
+                "PAIRK2H",
+                "PAIRKCK",
+                "PAIRPFTG",
+                "PAIBEJF",
+                "PAIBEJH",
+                "PAIBEJK",
+                "PAIBEJK1",
+                "PAIDFFHD",
+                "PAIBBWJ",
+                "PAIDFFSR",
+                "PAIRPDA",
+                "PAIESYS"
+            ],
+            "ETATMTRP": [
+                "PAICSYS",
+                "PAIKF8GB",
+                "PAIRK2HB",
+                "PAIESYS"
+            ]
+        },
+        "INTRETOURPHASESU": {
+            "INTRETOURMG01PEROD": [
+                "PAICSYS",
+                "PAIOD",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERPOC": [
+                "PAICSYS",
+                "PAID2YLC",
+                "PAIENVPOC",
+                "PAIESYS"
+            ],
+            "INTRETOURJ999PERFIX": [
+                "PAICSYS",
+                "PAIFIX",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFHV": [
+                "PAICSYS",
+                "PAIHV",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFHX": [
+                "PAICSYS",
+                "PAIHX",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFRH": [
+                "PAICSYS",
+                "PAIFRH",
+                "PAIESYS"
+            ],
+            "INTRETOURJ400SAVRH": [
+                "PAICSYS",
+                "PAIFRH2",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERHS": [
+                "PAICSYS",
+                "PAIHS",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERHT": [
+                "PAICSYS",
+                "PAIHT",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERIX": [
+                "PAICSYS",
+                "PAIIX",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERV1": [
+                "PAICSYS",
+                "PAIV1",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERSR": [
+                "PAICSYS",
+                "PAISR",
+                "PAIESYS"
+            ],
+            "INTRETOURJ100SAVCK": [
+                "PAICSYS",
+                "PAICK",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MTRINFOCENTRE": {
+        "MTRINFOCENTRE": {}
+    },
+    "MCALCUL": {
+        "INTRETOURAPCALCU": {
+            "INTRETOURMG01PEROD": [
+                "PAICSYS",
+                "PAIOD",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERPOC": [
+                "PAICSYS",
+                "PAID2YLC",
+                "PAIENVPOC",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERWH": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERRC": [
+                "PAICSYS",
+                "PAICR",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERYC": [
+                "PAICSYS",
+                "PAICY",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERCW": [
+                "PAICSYS",
+                "PAICW",
+                "PAIESYS"
+            ]
+        },
+        "SYNCHRO-I7": {
+            "PAQSYNCI7": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "CALCUL": {
+            "PAQCAL5A": [
+                "PAICSYS",
+                "PAITESCA",
+                "PAIEGDY",
+                "PAIE129A",
+                "PAIE129",
+                "PAIE129X",
+                "PAIE129S",
+                "PAID2BV",
+                "PAID2CL",
+                "PAID2YL",
+                "PAID2DL",
+                "PAIE130B",
+                "PAIE130",
+                "PAIE180",
+                "PAIK210",
+                "PAIE240",
+                "PAIK230",
+                "PAIK245",
+                "PAIK250",
+                "PAIK257",
+                "PAIK258",
+                "PAIKIXR",
+                "PAIK260",
+                "PAYS512",
+                "PAIR401",
+                "PAIKR10",
+                "PAIKR15",
+                "PAIKR20",
+                "PAIGCE",
+                "PAIGCH",
+                "PAIKFDP",
+                "PAIESYS"
+            ],
+            "ETATCAL5A": [
+                "PAICSYS",
+                "PAID2YLB",
+                "PAIE134",
+                "PAIE134D",
+                "PAIE240B",
+                "PAICRGN",
+                "PAIKR30",
+                "PAIKFDS",
+                "PAIESYS"
+            ],
+            "PAQCAL5B": [
+                "PAICSYS",
+                "PAYS528",
+                "PAIRPFSP",
+                "PAITCM",
+                "PAIKF5N",
+                "PAIKF6A",
+                "PAIKF6B",
+                "PAINF6F",
+                "PAIKF6C",
+                "PAIKF6D",
+                "PAIKF6F",
+                "PAIKFHS",
+                "PAIESYS"
+            ],
+            "FICCAL5B": [
+                "PAICSYS",
+                "PAIXCN",
+                "PAIESYS"
+            ],
+            "ETATCAL5B": [
+                "PAICSYS",
+                "PAIGKN",
+                "PAIESYS"
+            ],
+            "PAQMPHI": [
+                "PAICSYS",
+                "PAIKF7D",
+                "PAIKF7R",
+                "PAIKF7S",
+                "PAIESYS"
+            ],
+            "ETATMPHI": [
+                "PAICSYS",
+                "PAIKF7T",
+                "PAIKF7P",
+                "PAIKF7P2",
+                "PAIKF7PB",
+                "PAIKF7PF",
+                "PAIKF7P",
+                "PAIKF7P4",
+                "PAIKF7P",
+                "PAIKF7P6",
+                "PAIESYS"
+            ],
+            "PAQSTPRF": [
+                "PAICSYS",
+                "PAIUCE",
+                "PAIUCH",
+                "PAIESYS"
+            ],
+            "ETATSTPRF": [
+                "PAICSYS",
+                "PAIUCK",
+                "PAIESYS"
+            ],
+            "PAQKF8GA": [
+                "PAICSYS",
+                "PAIKF8G",
+                "PAIESYS"
+            ],
+            "ETATKF8GA": [
+                "PAICSYS",
+                "PAIKF8GB",
+                "PAIESYS"
+            ]
+        }
+    },
+    "DRETCHORUSBTI-LOT1": {
+        "CHORUS-BTI": {}
+    },
+    "CHORUS-CIR": {
+        "CHORUS-CIR": {}
+    },
+    "FIN-ACOMPTES-MENSUELS": {
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJMVTSUDERNIERPASSAGE": {}
+    },
+    "SYNCHRO-ZOS": {
+        "FINSYNCHROZOS": {
+            "FINSYNCHROZOS": [
+                "PAICSYS",
+                "ENCFT",
+                "PAIESYS"
+            ]
+        },
+        "INTRETOURFINMOIS": {
+            "INTRETOURJ999PERSL": [
+                "PAICSYS",
+                "paisl",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFOH": [
+                "PAICSYS",
+                "paioh",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFEI": [
+                "PAICSYS",
+                "PAIEI",
+                "PAIESYS"
+            ],
+            "INTRETOURJ100SAVOZ": [
+                "PAICSYS",
+                "paioz",
+                "PAIESYS"
+            ],
+            "INTRETOURJ999PERV6CUMUL": [
+                "PAICSYS",
+                "PAIV601",
+                "PAIESYS"
+            ],
+            "INTRETOURJ999PERGREPARCUMUL": [
+                "PAICSYS",
+                "PAIGREPAR",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MENVOICHORUFQ": {
+        "MENVOICHORUFQ": {}
+    },
+    "TRANSFERT-DSN2": {
+        "TRANSFERT-DSN2": {
+            "FICXDSN": [
+                "PAICSYS",
+                "PAIXDSN",
+                "PAIESYS"
+            ]
+        }
+    },
+    "CTRL-MVT-GEST-PP": {
+        "CONTROLMETIERPP": {},
+        "GESTIONCESSPAYE": {
+            "PRODUCTIONMVTCP": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PRODUCTIONETATCP": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "SIGNPP": {},
+        "CONTROLMODULEENTREESGEST": {
+            "JOBGEST": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "PRODUCTIONCSVBILANANOMALIES": {
+            "CSVVALIDEANOMALIE": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "PRODUCTIONPDFBILANANOMALIES": {
+            "PDFVALIDEANOMALIE": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "PHASE-SU-12": {
+        "CARTESU": {
+            "PAQMPHSU": [
+                "PAICSYS",
+                "PAIKF8A",
+                "PAIKF8B",
+                "PAISKEB",
+                "PAIKESU",
+                "PAID2BV",
+                "PAID2CL",
+                "PAID2YL",
+                "PAID2DL",
+                "PAIRPFSP",
+                "PAIDFFRH",
+                "PAIRPFRH",
+                "PAIKF8P",
+                "PAIKF8D",
+                "PAIPHISU",
+                "PAIS106",
+                "PAIS107",
+                "PAIS108",
+                "PAIS109",
+                "PAIKF7DA",
+                "PAIESYS"
+            ],
+            "ETATMPHSU": [
+                "PAICSYS",
+                "PAIKF8BB",
+                "PAISKEC",
+                "PAISKECB",
+                "PAIKERH",
+                "PAID2YLB",
+                "PAID2YLC",
+                "PAIRF8P",
+                "PAIKF7P",
+                "PAIKF7PS",
+                "PAIESYS"
+            ],
+            "PAQMEJDA": [
+                "PAICSYS",
+                "PAIKF8R",
+                "PAYS555",
+                "PAYS556",
+                "PAIEJD6",
+                "PAIEJDA",
+                "PAIESYS"
+            ],
+            "PAQMAJHX": [
+                "PAICSYS",
+                "PAIKF8X",
+                "PAIESYS"
+            ],
+            "PAQSTENT": [
+                "PAICSYS",
+                "PAIDOXS",
+                "PAIDOXT",
+                "PAIDOXV",
+                "PAIDOXW",
+                "PAIESYS"
+            ],
+            "FICSTENT": [
+                "PAICSYS",
+                "PAIXOT",
+                "PAIESYS"
+            ],
+            "PAQMTRP": [
+                "PAICSYS",
+                "PAIJAV3",
+                "PAIKF8G",
+                "PAIRBIC",
+                "PAIRK1E",
+                "PAIRK1H",
+                "PAIRK2H",
+                "PAIRKCK",
+                "PAIRPFTG",
+                "PAIBEJF",
+                "PAIBEJH",
+                "PAIBEJK",
+                "PAIBEJK1",
+                "PAIDFFHD",
+                "PAIBBWJ",
+                "PAIDFFSR",
+                "PAIRPDA",
+                "PAIESYS"
+            ],
+            "ETATMTRP": [
+                "PAICSYS",
+                "PAIKF8GB",
+                "PAIRK2HB",
+                "PAIESYS"
+            ]
+        }
+    },
+    "PHASE06": {
+        "PHASE06": {
+            "PAQMAPRE": [
+                "PAICSYS",
+                "PAIBADJ",
+                "PAIDFFTN",
+                "PAIDFFTS",
+                "PAIS041",
+                "PAIDFFTK",
+                "PAIS088",
+                "PAISVFEI",
+                "PAIDFFEI",
+                "PAIRPFEI",
+                "PAISVFS1",
+                "PAIDFFS1",
+                "PAIRPFS1",
+                "PAIDFSL",
+                "PAITSL",
+                "PAIDFSU",
+                "PAISVFDA",
+                "PAIDFFI7",
+                "PAISVFFW",
+                "PAIDFFW",
+                "PAIRPFFW",
+                "PAIOUVDE",
+                "PAIESYS"
+            ],
+            "PAQMAPR0": [
+                "PAICSYS",
+                "PAI4701",
+                "PAI4702",
+                "PAI4703",
+                "PAIUAU",
+                "PAIYS492",
+                "PAIESYS"
+            ],
+            "ETATMAPR0": [
+                "PAICSYS",
+                "PAI4708",
+                "PAI4706",
+                "PAIUAV",
+                "PAIYS493",
+                "PAIESYS"
+            ],
+            "PAQSUAG": [
+                "PAICSYS",
+                "PAIUAG",
+                "PAIESYS"
+            ],
+            "ETATSUAG": [
+                "PAICSYS",
+                "PAIUAH",
+                "PAIUAK",
+                "PAIESYS"
+            ],
+            "PAQMDA01": [
+                "PAICSYS",
+                "PAIRPBA",
+                "PAIRPFCD",
+                "PAIXFDJ",
+                "PAIXFDK",
+                "PAIXFRM",
+                "PAIESYS"
+            ],
+            "PAQMVIDE": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PAQMDICO": [
+                "PAICSYS",
+                "PAIINIAV",
+                "PAIESYS"
+            ],
+            "ETATMDICO": [
+                "PAICSYS",
+                "PAIDI1",
+                "PAIESYS"
+            ],
+            "PAQSBDDA": [
+                "PAICSYS",
+                "PAIRPFBD",
+                "PAIRPFDA",
+                "PAIESYS"
+            ]
+        }
+    },
+    "FIN-DE-MOIS-MDE": {
+        "INITIALISATIONMDE": {},
+        "PURGEMDE": {}
+    },
+    "RETENUES-REP": {
+        "RETENUES-REP": {}
+    },
+    "CAI": {
+        "MCORBDFCAI": {},
+        "INTRETOURAPCODBF": {}
+    },
+    "ENV-CHORUS1-LOT4": {
+        "CHORB": {}
+    },
+    "CALCULINDEMN": {
+        "CALCULINDEM": {
+            "PAQMPF2": [
+                "PAICSYS",
+                "PAIDFXX",
+                "PAIBDSKA",
+                "PAIBDSK",
+                "PAIBESP2",
+                "PAIBESP",
+                "PAIBESC",
+                "PAIBESF2",
+                "PAIBESF",
+                "PAIBESZ",
+                "PAIBBTC",
+                "PAIBBTK",
+                "PAIESYS"
+            ],
+            "PAQMPFA4": [
+                "PAICSYS",
+                "PAIBESY2",
+                "PAIBESY",
+                "PAIESYS"
+            ],
+            "PAQPFAKB": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PAQMCALI": [
+                "PAICSYS",
+                "PAIE127",
+                "PAI1235",
+                "PAIE150",
+                "PAIE150S",
+                "PAIDFFBA",
+                "PAIVZJ",
+                "PAIED1A",
+                "PAIE151",
+                "PAIJDE",
+                "PAIJDH",
+                "PAIJAV",
+                "PAIJAVBIS",
+                "PAI12351",
+                "PAIDFHDG",
+                "PAIRPHDA",
+                "PAI12355",
+                "PAI12356",
+                "PAIE122",
+                "PAI12305",
+                "PAIUBA",
+                "PAICTSEP",
+                "PAIESYS"
+            ],
+            "ETATMCALI": [
+                "PAICSYS",
+                "PAIYDD",
+                "PAIE153",
+                "PAIVZK",
+                "PAIE152",
+                "PAIE154",
+                "PAIE158",
+                "PAI12352",
+                "PAIUBB",
+                "PAI12354",
+                "PAIXHDCH",
+                "PAIXBACH",
+                "PAIESYS"
+            ],
+            "FICMDGFI": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABDAALIM",
+                "PAICEABHD",
+                "PAICEABHDALIM",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABBAALIM",
+                "PAICEABHI",
+                "PAICEABHIALIM",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEABV6",
+                "PAISDGCP",
+                "PAIXDGCP",
+                "PAIESYS"
+            ],
+            "FICRTES1": [
+                "PAICSYS",
+                "PAICEAA",
+                "PAICEABDA",
+                "PAICEABDAALIM",
+                "PAICEABHD",
+                "PAIXHD1",
+                "PAICEABHS",
+                "PAICEABBA",
+                "PAICEABHI",
+                "PAICEABHIALIM",
+                "PAICEABSR",
+                "PAICEABHW",
+                "PAICEABIX",
+                "PAICEABV001",
+                "PAICEABV6",
+                "PAIXSN1",
+                "PAIENVXSN1",
+                "PAIESYS"
+            ],
+            "PAQMCAL3": [
+                "PAICSYS",
+                "PAIS043ENV",
+                "PAIDKG",
+                "PAIER01",
+                "PAI1236",
+                "PAIER10",
+                "PAIER15",
+                "PAIDFFRH",
+                "PAIRPFRH",
+                "PAIE160",
+                "PAI12361",
+                "PAIDFHDR",
+                "PAIE160S",
+                "PAIE122A",
+                "PAIE122",
+                "PAIE165",
+                "PAIE155",
+                "PAIE170A",
+                "PAIE170",
+                "PAIE170Z",
+                "PAIE174",
+                "PAINHP",
+                "PAIE196",
+                "PAIEGDY",
+                "PAICRA6",
+                "PAICRAS",
+                "PAICRAV",
+                "PAIESYS"
+            ],
+            "ETATMCAL3": [
+                "PAICSYS",
+                "PAIDKH",
+                "PAI1237",
+                "PAI1237Y",
+                "PAINHR",
+                "PAICRGV",
+                "PAICRSV",
+                "PAIESYS"
+            ],
+            "ETATEDOUB": [
+                "PAICSYS",
+                "PAIS053",
+                "PAIESYS"
+            ],
+            "PAQMCAL4": [
+                "PAICSYS",
+                "PAINHB",
+                "PAINHD",
+                "PAINHE",
+                "PAIESYS"
+            ],
+            "FICMCAL4": [
+                "PAICSYS",
+                "PAIXDEF",
+                "PAIXJUS",
+                "PAIXPAB",
+                "PAIXGAT",
+                "PAIESYS"
+            ],
+            "ETATMCAL4": [
+                "PAICSYS",
+                "PAINHFA",
+                "PAINHFB",
+                "PAIDARC",
+                "PAIESYS"
+            ],
+            "PAQMPF3": [
+                "PAICSYS",
+                "PAIBDSF",
+                "PAIDFXX",
+                "PAIBDSKB",
+                "PAIBDSK",
+                "PAIBESP3",
+                "PAIBESP",
+                "PAIBESPU",
+                "PAIBESC",
+                "PAIBESF3",
+                "PAIBESF",
+                "PAIBBTC",
+                "PAIBBTCS",
+                "PAIBEJD",
+                "PAIBEJH",
+                "PAIBEJK",
+                "PAIBEJK1",
+                "PAIBBTF",
+                "PAIBESY3",
+                "PAIBESY",
+                "PAIESYS"
+            ],
+            "ETATMPF3": [
+                "PAICSYS",
+                "PAIBBTG",
+                "PAIESYS"
+            ],
+            "PAQCONTH": [
+                "PAICSYS",
+                "PAIUAA",
+                "PAIUAE",
+                "PAIUAF",
+                "PAIUADA",
+                "PAIESYS"
+            ],
+            "ETATCONTH": [
+                "PAICSYS",
+                "PAIUAB",
+                "PAIUAF2",
+                "PAIUAD",
+                "PAISP744",
+                "PAIESYS"
+            ],
+            "PAQGREVE": [
+                "PAICSYS",
+                "PAIE400",
+                "PAIE409",
+                "PAIE122",
+                "PAIE420",
+                "PAIE423A",
+                "PAIE424",
+                "PAIESYS"
+            ],
+            "ETATGREVE": [
+                "PAICSYS",
+                "PAIE421",
+                "PAIE423B",
+                "PAIE426",
+                "PAIESYS"
+            ],
+            "PAQJOCAR": [
+                "PAICSYS",
+                "PAIC400",
+                "PAIC409",
+                "PAIC410",
+                "PAIC420",
+                "PAIC423",
+                "PAIC424",
+                "PAIESYS"
+            ],
+            "ETATJOCAR": [
+                "PAICSYS",
+                "PAIC423B",
+                "PAIC426",
+                "PAIC430",
+                "PAIESYS"
+            ],
+            "PAQM031": [
+                "PAICSYS",
+                "PAI128TR",
+                "PAIE130A",
+                "PAIE130",
+                "PAIE12C",
+                "PAIE129B",
+                "PAIE129",
+                "PAIE12D",
+                "PAIRPFI2",
+                "PAIDFFI7",
+                "PAICRAA",
+                "PAICRAB",
+                "PAIESYS"
+            ],
+            "FICM031": [
+                "PAICSYS",
+                "PAIXDEF2",
+                "PAIESYS"
+            ],
+            "ETATM031": [
+                "PAICSYS",
+                "PAIE134",
+                "PAIE134I",
+                "PAIE134F",
+                "PAICRAF",
+                "PAIESYS"
+            ],
+            "PAQDABE": [
+                "PAICSYS",
+                "PAIDABE",
+                "PAIE122",
+                "PAIESYS"
+            ]
+        },
+        "RETAPCALCULINDEM": {
+            "INTRETOURMG01PERBA": [
+                "PAICSYS",
+                "PAIBA",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERHI": [
+                "PAICSYS",
+                "PAIHI",
+                "PAIESYS"
+            ],
+            "INTRETOURCICPAIFDA": [
+                "PAICSYS",
+                "PAIDA",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERWH": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERHD": [
+                "PAICSYS",
+                "PAIHD",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERJB": [
+                "PAICSYS",
+                "PAIJB",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERXP": [
+                "PAICSYS",
+                "PAIXP",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERSU": [
+                "PAICSYS",
+                "paisu",
+                "PAIESYS"
+            ],
+            "INTRETOURJ100SAVCY": [
+                "PAICSYS",
+                "PAICY",
+                "PAIESYS"
+            ],
+            "INTRETOURJ999PERPABA22": [
+                "PAIPABA22",
+                "PAICSYS",
+                "PAIPABA22",
+                "PAIESYS"
+            ]
+        },
+        "SYNCHRO-I2": {
+            "PAQSYNCI2": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "PAIEMENTS": {
+        "PAIEMENTS": {
+            "PAQMPMEN": [
+                "PAICSYS",
+                "PAITNBB",
+                "PAIRBCK",
+                "PAIRBCH",
+                "PAIRBCO",
+                "PAIRBCN",
+                "PAIRBCT",
+                "PAIRBNKP",
+                "PAIRBNK",
+                "PAIRNLZP",
+                "PAIRNLZ",
+                "PAISVSEP",
+                "PAIESYS"
+            ],
+            "FICMPMEN": [
+                "PAICSYS",
+                "PAIRBCK",
+                "PAIESYS"
+            ],
+            "ETATMPMEN": [
+                "PAICSYS",
+                "PAIRBCM",
+                "PAIRBCL",
+                "PAIRBCJ",
+                "PAIRBCI",
+                "PAIESYS"
+            ],
+            "ETATMPETADEF": [
+                "PAICSYS",
+                "PAIPAIN1",
+                "PAIRLST",
+                "PAIXPAIN1",
+                "PAIESYS"
+            ],
+            "PAQE1W1": [
+                "PAICSYS",
+                "PAIE1W1",
+                "PAIESYS"
+            ],
+            "PAQCFSAT": [
+                "PAICSYS",
+                "PAIRSAT",
+                "PAIESYS"
+            ],
+            "FICCFSAT": [
+                "PAICSYS",
+                "PAIRSATA",
+                "PAIESYS"
+            ],
+            "ETATCFSAT": [
+                "PAICSYS",
+                "PAICFSAT",
+                "PAIESYS"
+            ],
+            "PAQMPETSDES": [
+                "PAICSYS",
+                "PAIRSC1",
+                "PAIESYS"
+            ],
+            "ETATMPETSDES": [
+                "PAICSYS",
+                "PAIXSCTS",
+                "PAIESYS"
+            ]
+        },
+        "INTRETOURAPMPAYMEN": {
+            "INTRETOURAPMPAYMEN": [
+                "PAICSYS",
+                "PAIW4",
+                "PAIW4",
+                "PAIESYS"
+            ]
+        }
+    },
+    "COTISATIONS": {
+        "INTRETOURAPCOTIS": {
+            "INTRETOURCICPAIFHC": [
+                "PAICSYS",
+                "PAIHC",
+                "PAIESYS"
+            ],
+            "INTRETOURMG01PERCG": [
+                "PAIC710",
+                "PAICSYS",
+                "PAIC710",
+                "PAIESYS"
+            ]
+        },
+        "COTISATIONS": {
+            "PAQMCOT1": [
+                "PAICSYS",
+                "PAICCY",
+                "PAIFK30",
+                "PAITCY",
+                "PAITCYS",
+                "PAITCYA",
+                "PAIFKAR",
+                "PAIFBIC",
+                "PAIFKM",
+                "PAIFKC",
+                "PAIESYS"
+            ],
+            "FICMCOT1": [
+                "PAICSYS",
+                "PAIXR6",
+                "PAIFK10",
+                "PAIFKMDD",
+                "PAIFKMD",
+                "PAIXAT75D",
+                "PAIFKMDA",
+                "PAIFKMD",
+                "PAIXAT75A",
+                "PAIFKR",
+                "PAIFKMI",
+                "PAIESYS"
+            ],
+            "ETATMCOT1": [
+                "PAICSYS",
+                "PAIFK30B",
+                "PAIFKMB",
+                "PAIFKCB",
+                "PAIESYS"
+            ],
+            "PAQMCOTA": [
+                "PAICSYS",
+                "PAIFKD",
+                "PAIFKE",
+                "PAIFKJ",
+                "PAIFKFF",
+                "PAIFKIW",
+                "PAIFKES",
+                "PAIFKFFS",
+                "PAIFKIWS",
+                "PAIESYS"
+            ],
+            "FICMCOTA": [
+                "PAICSYS",
+                "PAIFKDB",
+                "PAIXLD",
+                "PAIFKDA",
+                "PAIXLA",
+                "PAIXLX",
+                "PAIXLE",
+                "PAIXLI",
+                "PAIXLQ",
+                "PAIFKI",
+                "PAIXAGFK",
+                "PAIESYS"
+            ],
+            "ETATMCOTA": [
+                "PAICSYS",
+                "PAIFKEC",
+                "PAIFKIV",
+                "PAIFKFN",
+                "PAIFKFNS",
+                "PAIFKIB",
+                "PAIFKIC",
+                "PAIFKF",
+                "PAIFKEN",
+                "PAIESYS"
+            ],
+            "PAQMCOTB": [
+                "PAICSYS",
+                "PAIFKG",
+                "PAIFKGA",
+                "PAIFKGC",
+                "PAIFKGS",
+                "PAIFKB",
+                "PAIFKBV",
+                "PAIESYS"
+            ],
+            "ETATMCOTB": [
+                "PAICSYS",
+                "PAIFKGD",
+                "PAIFKB1B",
+                "PAIFKB1C",
+                "PAIFKB1D",
+                "PAIFKB1E",
+                "PAIFKB1F",
+                "PAIFKB1G",
+                "PAIFKBVB",
+                "PAIFKK",
+                "PAIESYS"
+            ],
+            "PAQMCOTC": [
+                "PAICSYS",
+                "PAIFKH",
+                "PAIFKU",
+                "PAIESYS"
+            ],
+            "FICMCOTC": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "ETATMCOTC": [
+                "PAICSYS",
+                "PAIFKHSD",
+                "PAIFKHSD",
+                "PAIFKHSD",
+                "PAIFKHSD",
+                "PAIFKUB",
+                "PAIFKUC",
+                "PAIESYS"
+            ],
+            "PAQMCOT2": [
+                "PAICSYS",
+                "PAIFKP",
+                "PAIFPBAM",
+                "PAIESYS"
+            ],
+            "ETATMCOT2": [
+                "PAICSYS",
+                "PAISP854",
+                "PAIFPHM",
+                "PAIFKW",
+                "PAIESYS"
+            ],
+            "PAQMCOT3": [
+                "PAICSYS",
+                "PAIRBCH",
+                "PAIRBCKB",
+                "PAIRBCO",
+                "PAIRBCN",
+                "PAIRBRC",
+                "PAIRBLW",
+                "PAIRNLZ",
+                "PAIESYS"
+            ],
+            "FICMCOT3": [
+                "PAICSYS",
+                "PAICFTDE",
+                "PAIESYS"
+            ],
+            "ETATMCOT3": [
+                "PAICSYS",
+                "PAIFKV",
+                "PAIRBCM",
+                "PAIRBCL",
+                "PAIRBCJ",
+                "PAIRBCI",
+                "PAIRLSC",
+                "PAIESYS"
+            ],
+            "FICCFTAJ": [
+                "PAICSYS",
+                "PAIXAJ",
+                "PAIXLZ",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MOBIBAN": {
+        "INTRETOURAPMOBIB": {},
+        "MOBIBANC": {}
+    },
+    "CHORUS-FIR": {
+        "CHORUS-FIR": {}
+    },
+    "PHI-DEMANDE": {
+        "PHI-DEMANDE": {}
+    },
+    "RETOUR-ENSAP": {
+        "RETOUR-ENSAP": {}
+    },
+    "RETENUES-PAF": {
+        "RETENUES-PAF": {}
+    },
+    "CHORUS-053": {
+        "CHORUS-053": {}
+    },
+    "PASRAU": {
+        "PASRAU": {
+            "PAQDADPA": [
+                "PAICSYS",
+                "PAIDXAA",
+                "PAIDXAB",
+                "PAIDXAC",
+                "PAIDXPD",
+                "PAIESYS"
+            ],
+            "ETATDADPA": [
+                "PAICSYS",
+                "PAIDXAE",
+                "PAIDXAEB",
+                "PAIDXAE9",
+                "PAIESYS"
+            ],
+            "PAQPASRO": [
+                "PAICSYS",
+                "PAIE500",
+                "PAIRK5A",
+                "PAIRK5B",
+                "PAIRK5D",
+                "PAIRK6A",
+                "PAIRK6C",
+                "PAIRK6D",
+                "PAIRK6E",
+                "PAIRK6G",
+                "PAIRK6H",
+                "PAIRK6P",
+                "PAIRK5Z",
+                "PAIESYS"
+            ],
+            "ETATPASRO": [
+                "PAICSYS",
+                "PAILC1B",
+                "PAIESYS"
+            ]
+        },
+        "RETOUR-PASRAU": {
+            "INTRETOURMG01PERAS": [
+                "PAICSYS",
+                "PAIAS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MCALCUL-12": {
+        "SYNCHRO-I7": {
+            "PAQSYNCI7": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "CALCUL-12": {
+            "PAQCAL5A": [
+                "PAICSYS",
+                "PAITESCA",
+                "PAIEGDY",
+                "PAIE129A",
+                "PAIE129",
+                "PAIE129X",
+                "PAIE129S",
+                "PAID2BV",
+                "PAID2CL",
+                "PAID2YL",
+                "PAID2DL",
+                "PAIE130B",
+                "PAIE130",
+                "PAIE180",
+                "PAIK210",
+                "PAIE240",
+                "PAIK230",
+                "PAIK245",
+                "PAIK250",
+                "PAIK257",
+                "PAIK258",
+                "PAIKIXR",
+                "PAIK260",
+                "PAYS512",
+                "PAIR401",
+                "PAIKR10",
+                "PAIKR15",
+                "PAIKR20",
+                "PAIGCE",
+                "PAIGCH",
+                "PAIKFDP",
+                "PAIESYS"
+            ],
+            "ETATCAL5A": [
+                "PAICSYS",
+                "PAID2YLB",
+                "PAIE134",
+                "PAIE134D",
+                "PAIE240B",
+                "PAICRGN",
+                "PAIKR30",
+                "PAIKFDS",
+                "PAIESYS"
+            ],
+            "PAQCAL5B": [
+                "PAICSYS",
+                "PAYS528",
+                "PAIRPFSP",
+                "PAITCM",
+                "PAIKF5N",
+                "PAIKF6A",
+                "PAIKF6B",
+                "PAINF6F",
+                "PAIKF6C",
+                "PAIKF6D",
+                "PAIKF6F",
+                "PAIKFHS",
+                "PAIESYS"
+            ],
+            "FICCAL5B": [
+                "PAICSYS",
+                "PAIXCN",
+                "PAIESYS"
+            ],
+            "ETATCAL5B": [
+                "PAICSYS",
+                "PAIGKN",
+                "PAIESYS"
+            ],
+            "PAQMPHI": [
+                "PAICSYS",
+                "PAIKF7D",
+                "PAIKF7R",
+                "PAIKF7S",
+                "PAIESYS"
+            ],
+            "ETATMPHI": [
+                "PAICSYS",
+                "PAIKF7T",
+                "PAIKF7P",
+                "PAIKF7P2",
+                "PAIKF7PB",
+                "PAIKF7PF",
+                "PAIKF7P",
+                "PAIKF7P4",
+                "PAIKF7P",
+                "PAIKF7P6",
+                "PAIESYS"
+            ],
+            "PAQSTPRF": [
+                "PAICSYS",
+                "PAIUCE",
+                "PAIUCH",
+                "PAIESYS"
+            ],
+            "ETATSTPRF": [
+                "PAICSYS",
+                "PAIUCK",
+                "PAIESYS"
+            ],
+            "PAQKF8GA": [
+                "PAICSYS",
+                "PAIKF8G",
+                "PAIESYS"
+            ],
+            "ETATKF8GA": [
+                "PAICSYS",
+                "PAIKF8GB",
+                "PAIESYS"
+            ]
+        }
+    },
+    "ENV-CHORUS2-LOT3": {
+        "CHORD": {}
+    },
+    "TRANSF-GATEWAY": {
+        "TRANS-GATEWAY": {
+            "PAQTRJE": [
+                "PAICSYS",
+                "PAITRJE",
+                "PAIESYS"
+            ],
+            "FICTRJE": [
+                "PAICSYS",
+                "PAIXJE20",
+                "PAIESYS"
+            ],
+            "PAQTRJ5": [
+                "PAICSYS",
+                "PAITRJ5",
+                "PAIESYS"
+            ],
+            "FICTRJ5": [
+                "PAICSYS",
+                "PAIXJ5",
+                "PAIESYS"
+            ],
+            "PAQTRLS": [
+                "PAICSYS",
+                "PAITRLS",
+                "PAIESYS"
+            ],
+            "FICTRLS": [
+                "PAICSYS",
+                "PAIXLS",
+                "PAIESYS"
+            ],
+            "FICTRBJ": [
+                "PAICSYS",
+                "PAITRBJ",
+                "PAIESYS"
+            ],
+            "FICTR22": [
+                "PAICSYS",
+                "PAITR22",
+                "PAIESYS"
+            ]
+        }
+    },
+    "RETENUES": {
+        "RETENUES": {
+            "PAQRETIA": [
+                "PAICSYS",
+                "PAIEJDR",
+                "PAIEJE6",
+                "PAIEJF6",
+                "PAIGJA",
+                "PAIEJD8",
+                "PAIGKLB",
+                "PAIEJME",
+                "PAIGKX",
+                "PAIGJT",
+                "PAIUZF",
+                "PAIUZH",
+                "PAIUZJ",
+                "PAIDFY28",
+                "PAIESYS"
+            ],
+            "ETATRETIA": [
+                "PAICSYS",
+                "PAIEJDPA",
+                "PAIEJDPB",
+                "PAIEJD7",
+                "PAIGKF2",
+                "PAIUAJ1",
+                "PAIGKM",
+                "PAIEJW",
+                "PAIGJV",
+                "PAIGJV",
+                "PAIGJX",
+                "PAIESYS"
+            ],
+            "PAQRETIB": [
+                "PAICSYS",
+                "PAIGJO",
+                "PAIDFFSB",
+                "PAIRPSBA",
+                "PAIRPFSB",
+                "PAIEJF",
+                "PAIGKU",
+                "PAIDFFSB",
+                "PAIRPSBB",
+                "PAIRPFSB",
+                "PAIGKF3",
+                "PAIEJJ",
+                "PAIGJN",
+                "PAIEJG",
+                "PAIESYS"
+            ],
+            "ETATRETIB": [
+                "PAICSYS",
+                "PAIGJR",
+                "PAIGKFU",
+                "PAIGJQ",
+                "PAIESYS"
+            ],
+            "FICRETIB": [
+                "PAICSYS",
+                "PAIEJF1",
+                "PAIXSBCH",
+                "PAIESYS"
+            ],
+            "PAQRET1A": [
+                "PAICSYS",
+                "PAIGKA",
+                "PAIESYS"
+            ],
+            "FICRET1A": [
+                "PAICSYS",
+                "PAIXDA1",
+                "PAIESYS"
+            ],
+            "ETATRET1A": [
+                "PAICSYS",
+                "PAIGKH",
+                "PAIGKG",
+                "PAIGKJ",
+                "PAIGKV",
+                "PAIGJD",
+                "PAIGKWET",
+                "PAIGKW",
+                "PAIGK2",
+                "PAIGK2ET",
+                "PAIGKWDE",
+                "PAIGKW",
+                "PAIGK2",
+                "PAIGK2DE",
+                "PAIGJZ",
+                "PAIGKB",
+                "PAIGKCA",
+                "PAIGKCB",
+                "PAIGKCC",
+                "PAIGKCD",
+                "PAIGKCE",
+                "PAIGKDA",
+                "PAIGKDB",
+                "PAIGKDC",
+                "PAIESYS"
+            ],
+            "PAQRET1B": [
+                "PAICSYS",
+                "PAIGJCA",
+                "PAIGJCB",
+                "PAIDFFVO",
+                "PAIRPFVO",
+                "PAIGJC",
+                "PAIGJG",
+                "PAIGJI",
+                "PAISKG3",
+                "PAISGC",
+                "PAIESYS"
+            ],
+            "ETATRET1B": [
+                "PAICSYS",
+                "PAIGJ1",
+                "PAIGJ3",
+                "PAIGKFVA",
+                "PAIGKFVB",
+                "PAIGKFXA",
+                "PAIGKFXB",
+                "PAIESYS"
+            ],
+            "PAQRET1C": [
+                "PAICSYS",
+                "PAISGC4",
+                "PAISGA",
+                "PAISGAAFTER",
+                "PAIPBP1",
+                "PAIGJBI",
+                "PAIGJM",
+                "PAIJJE",
+                "PAIJJEETR",
+                "PAIJJFETR",
+                "PAIEJX",
+                "PAIESYS"
+            ],
+            "ETATRET1C": [
+                "PAICSYS",
+                "PAISGAREBEFORE",
+                "PAISGARE",
+                "PAIGJBIA",
+                "PAIGJMA",
+                "PAIGJS",
+                "PAIGJH",
+                "PAIGJB",
+                "PAIJJFA",
+                "PAIJJFB",
+                "PAIGHE",
+                "PAIEJY",
+                "PAIGKQ",
+                "PAIESYS"
+            ],
+            "PAQMRET2": [
+                "PAICSYS",
+                "PAIRBCK",
+                "PAIRBCH",
+                "PAIRBCO",
+                "PAIRBCN",
+                "PAIRBRC",
+                "PAIRBLW",
+                "PAIRNLZ",
+                "PAIESYS"
+            ],
+            "FICMRET2": [
+                "PAICSYS",
+                "PAIRBCK",
+                "PAIRBRCA",
+                "PAIRBrcb",
+                "PAIESYS"
+            ],
+            "ETATMRET2": [
+                "PAICSYS",
+                "PAIRBCM",
+                "PAIRBCL",
+                "PAIRBCJ",
+                "PAIRBCR",
+                "PAIRBCI",
+                "PAIRLSRA",
+                "PAIRLSRB",
+                "PAIESYS"
+            ],
+            "PAQMRET3": [
+                "PAICSYS",
+                "PAIUZA",
+                "PAIESYS"
+            ],
+            "ETATMRET3": [
+                "PAICSYS",
+                "PAIESYS"
+            ],
+            "PAQCHOR1": [
+                "PAICSYS",
+                "PAISGE2A",
+                "PAISGE2R",
+                "PAISKI2",
+                "PAIPBP9",
+                "PAIESYS"
+            ],
+            "ETATCHOR1": [
+                "PAICSYS",
+                "PAISGE2",
+                "PAIPBP2a",
+                "PAIPBP2b",
+                "PAIESYS"
+            ],
+            "PAQREOUVERTURECICS": [
+                "PAICSYS",
+                "OUVFICCICS",
+                "PAIESYS"
+            ]
+        }
+    },
+    "RETENUESGI": {
+        "RETENUESGI": {
+            "PAQMRGI": [
+                "PAICSYS",
+                "PAIDKAC",
+                "PAIDKB0",
+                "PAIDKB2",
+                "PAIDKB",
+                "PAIDKD",
+                "PAIEKA",
+                "PAYS179",
+                "PAIDFFSB",
+                "PAIRPFSB",
+                "PAIMRGIF",
+                "PAIESYS"
+            ],
+            "ETATMRGI": [
+                "PAICSYS",
+                "PAIDKB1",
+                "PAIDKI",
+                "PAIDKF",
+                "PAIESYS"
+            ]
+        }
+    },
+    "MENVINDIAREMU": {
+        "MENVINDIAREMU": {}
+    },
+    "JOURNALIER-NUIT": {
+        "INTRETOURAVPASSA": {}
+    },
+    "MAJ-AA": {
+        "MAJ-AVANCE-ACOMPTE": {},
+        "SIGNAA": {
+            "SIGNAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEUILLEGESTION": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "CONTROLMETIERAA": {
+            "CONTROLMETIERAA": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "HISTORISATION-POST-IHM": {
+            "HISTORISATION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        },
+        "MAJIDPORTEFEGESTION-POST-IHM": {
+            "MAJIDPORTEFEUILLEGESTION": [
+                "PAICSYS",
+                "PAIESYS"
+            ]
+        }
+    }
+}
