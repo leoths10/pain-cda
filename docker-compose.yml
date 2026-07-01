@@ -58,9 +58,13 @@ services:
       - ./back/.env
     environment:
       - TZ=Europe/Paris
+      # Mode local : sert le plan depuis tours.json (pas de SSH requis).
+      # Passer à false quand l'accès SSH au serveur VTOM est rétabli.
+      - VTOM_LOCAL_MODE=true
     volumes:
       - ./scripts:/var/www/html/scripts
       - ./logs:/var/www/html/storage/logs
+      - ./tours.json:/var/www/html/storage/app/tours.json:ro
     networks:
       - pain-network
     depends_on:

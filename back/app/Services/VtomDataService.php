@@ -37,14 +37,38 @@ class VtomDataService
             return ['data' => $cached, 'cached' => true];
         }
 
-        $data = $this->python->run(
-            $this->config->fetchToursScript(),
-            $this->config->toursEnv(),
-            timeout: $this->config->timeout('fetch_tours'),
-        );
+        $data = $this->config->localEnabled()
+            ? $this->loadLocalTours()
+            : $this->python->run(
+                $this->config->fetchToursScript(),
+                $this->config->toursEnv(),
+                timeout: $this->config->timeout('fetch_tours'),
+            );
         $this->cachePlan($data);
 
         return ['data' => $data, 'cached' => false];
+    }
+
+    /**
+     * Charge le plan depuis le fichier local tours.json (mode hors-SSH).
+     *
+     * @throws RuntimeException Si le fichier est absent ou invalide.
+     */
+    private function loadLocalTours(): array
+    {
+        $file = $this->config->localFile();
+
+        if (!is_file($file) || !is_readable($file)) {
+            throw new RuntimeException("Mode local VTOM : fichier introuvable ou illisible ({$file}).");
+        }
+
+        $data = json_decode((string) file_get_contents($file), true);
+
+        if (!is_array($data)) {
+            throw new RuntimeException("Mode local VTOM : contenu JSON invalide dans {$file}.");
+        }
+
+        return $data;
     }
 
     /**

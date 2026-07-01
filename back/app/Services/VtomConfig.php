@@ -28,6 +28,18 @@ class VtomConfig
         return $this->scriptsPath() . '/fetch_paysage_version.py';
     }
 
+    /** Mode local actif : le plan est lu depuis un fichier au lieu du SSH. */
+    public function localEnabled(): bool
+    {
+        return (bool) config('vtom.local.enabled');
+    }
+
+    /** Chemin du fichier tours.json utilisé en mode local. */
+    public function localFile(): string
+    {
+        return (string) config('vtom.local.file');
+    }
+
     public function cacheKey(string $which): string
     {
         return config("vtom.cache.{$which}_key");

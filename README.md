@@ -1,4 +1,4 @@
-# 🌧️ PAIN — Real-time Architecture INtegration Navigator
+# 🌧️ PAIN — PAysage INformation
 
 > **Site documentaire VTOM** — Une plateforme web full-stack pour visualiser, explorer et documenter les orchestrations VTOM.
 > Récupère automatiquement le plan depuis un serveur VTOM distant via SSH/SFTP, le convertit en JSON et propose une interface SVG interactive, avec accès en lecture aux scripts shell et extraction des chaînes batch.
@@ -21,8 +21,10 @@ docker compose up -d
 
 | Service | URL |
 |---------|-----|
-| Site (nginx) | http://localhost |
-| PostgreSQL | localhost:5432 |
+| Site (nginx) | http://localhost:8080 |
+| PostgreSQL | localhost:5435 |
+
+Connexion par défaut (compte LDAP de démo) : **`dev`** / **`dev`**.
 
 ---
 
@@ -38,8 +40,10 @@ docker compose up -d
 8. [API Backend](#-api-backend)
 9. [Scripts Python](#-scripts-python)
 10. [Frontend](#-frontend)
-11. [Déploiement](#-déploiement)
-12. [Maintenance et dépannage](#-maintenance-et-dépannage)
+11. [Couche documentaire](#-couche-documentaire)
+12. [Tests](#-tests)
+13. [Déploiement](#-déploiement)
+14. [Maintenance et dépannage](#-maintenance-et-dépannage)
 
 ---
 
@@ -53,12 +57,14 @@ docker compose up -d
 - 🔍 **Rechercher** instantanément n'importe quelle application ou traitement dans tout le plan
 - 📄 **Consulter** le contenu des scripts shell directement dans le navigateur, avec coloration syntaxique
 - 🔗 **Extraire** les variables `CHAINE_BATCH` de tous les scripts en une seule opération, avec export CSV/JSON
+- 📝 **Annoter** le plan via des **calques documentaires** : poser des encadrés et tracer des flèches vers les applications, pour capitaliser la connaissance métier (voir [Couche documentaire](#-couche-documentaire))
+- 🔐 **Authentifier** les utilisateurs via l'annuaire **LDAP** (tokens Sanctum, voir [AUTH.md](AUTH.md))
 - 📚 **Documenter** avec deux guides intégrés (utilisateur et développeur)
 - 🎨 **Personnaliser** avec un thème clair/sombre persistant
 
 ### Positionnement par rapport à VTOM natif
 
-Le plan VTOM est déjà consultable depuis l'application VTOM. PAIN ne le remplace pas : il vient **enrichir** cette consultation avec une navigation moderne, une recherche transversale, la lecture des scripts sans SSH, et pose les fondations d'une couche documentaire collaborative à venir — où les experts pourront renseigner directement leur connaissance métier sur les applications et traitements.
+Le plan VTOM est déjà consultable depuis l'application VTOM. PAIN ne le remplace pas : il vient **enrichir** cette consultation avec une navigation moderne, une recherche transversale, la lecture des scripts sans SSH, et une **couche documentaire collaborative** où les experts renseignent directement leur connaissance métier sur le plan (calques d'annotation).
 
 ---
 
@@ -180,8 +186,11 @@ Bannière affichée au premier chargement. Cookies utilisés uniquement pour les
 | Frontend | React 19.2, TypeScript 5.7, Vite 7.2, React Router 7 |
 | Backend | PHP 8.2+, Laravel 12 |
 | Base de données | PostgreSQL 16 |
+| Authentification | LDAP (directorytree/ldaprecord) + Sanctum, refresh tokens dans Redis |
+| Cache / sessions | Redis 7 |
 | Scripts | Python 3 (paramiko, xmltodict) |
-| Infrastructure | Docker Compose |
+| Tests | PHPUnit (back), Vitest (front), pytest (scripts) |
+| Infrastructure | Docker Compose (db, ldap, redis, back, front, nginx) |
 
 Le frontend utilise du CSS natif (pas de framework type Tailwind ou Bootstrap).
 
@@ -273,14 +282,14 @@ docker compose up -d
 
 # 4. Vérifier
 docker compose ps
-curl http://localhost:8009/api/health
+curl http://localhost:8080/api/health
 ```
 
 Au premier lancement, le conteneur backend :
 - Installe Composer (dépendances PHP) et les packages Python (`paramiko`, `xmltodict`)
 - Génère la clé applicative Laravel si absente
 - Exécute les migrations PostgreSQL en arrière-plan
-- Démarre `php artisan serve` sur le port 8000 (exposé en 8009)
+- Démarre `php artisan serve` sur le port 8000 (interne ; exposé via nginx sur `:8080`)
 
 ### Développement local sans Docker
 
@@ -333,7 +342,23 @@ DB_USERNAME=pain
 DB_PASSWORD=pain
 ```
 
-**Accès SSH au serveur VTOM** (obligatoires — récupération du plan) :
+**Mode local (sans SSH)** — pour consulter le plan sans accès au serveur VTOM :
+
+```env
+VTOM_LOCAL_MODE=true
+# VTOM_LOCAL_FILE=/var/www/html/storage/app/tours.json   # défaut
+```
+
+Quand `VTOM_LOCAL_MODE=true`, le plan est lu depuis un fichier **`tours.json`**
+au lieu d'être récupéré en SSH. Le `docker-compose.yml` monte déjà `./tours.json`
+dans le conteneur (`storage/app/tours.json`) et active ce mode par défaut.
+Pratique en démo ou hors réseau. Repasser à `false` rétablit la récupération SSH.
+
+> ⚠️ Le mode local ne couvre que **le plan**. Le contenu des scripts shell et le
+> scan `CHAINE_BATCH` nécessitent toujours le SSH (jump host) et resteront en
+> erreur tant que `VTOM_LOCAL_MODE=true`.
+
+**Accès SSH au serveur VTOM** (récupération du plan, si mode local désactivé) :
 
 ```env
 VTOM_SSH_HOST=
@@ -376,11 +401,22 @@ pain-main/
 │   ├── composer.json
 │   ├── requirements.txt        # Dépendances Python (paramiko, xmltodict)
 │   ├── .env.example
+│   ├── .env.testing            # Env de test (SQLite mémoire)
+│   ├── phpunit.xml             # Config tests (force SQLite)
 │   ├── app/
-│   │   └── Http/
-│   │       ├── Controllers/
-│   │       │   └── VtomController.php   # Contrôleur principal
-│   │       └── Middleware/              # CORS, rate limiting, headers sécurité
+│   │   ├── Http/
+│   │   │   ├── Controllers/
+│   │   │   │   ├── AuthController.php          # Login LDAP + tokens Sanctum
+│   │   │   │   ├── VtomController.php          # Plan, scripts, CHAINE_BATCH
+│   │   │   │   └── DocumentationController.php # Couche documentaire (calques)
+│   │   │   ├── Requests/                       # Validation (StorePlanDoc, SavePlanDocContent)
+│   │   │   └── Middleware/                     # CORS, rate limiting, headers sécurité
+│   │   ├── Models/             # User, PlanDoc, Annotation, Arrow, Tag
+│   │   ├── Repositories/
+│   │   │   └── DocRepository.php   # Accès données calques (CRUD, sauvegarde transactionnelle)
+│   │   └── Services/           # VtomDataService, VtomConfig, PythonScriptRunner
+│   ├── database/migrations/    # + plan_docs, annotations, arrows, tags, plan_doc_tag
+│   ├── tests/Feature/          # PlanDocApiTest, VtomLocalModeTest
 │   └── routes/
 │       └── api.php             # Définition des routes REST
 │
@@ -402,21 +438,27 @@ pain-main/
 │       │   └── vtom/              # Sous-composants du plan
 │       │       ├── PlanHeader.tsx / PlanSvgCanvas.tsx / PlanMinimap.tsx
 │       │       ├── AppTooltip.tsx / ChaineBatchPanel.tsx / SousProgrammesModal.tsx
+│       │       ├── AnnotationLayer.tsx  # Rendu SVG des annotations + flèches
+│       │       ├── DocToolbar.tsx       # Pilotage des calques documentaires
 │       │       ├── ParameterDisplay.tsx
 │       │       └── modals/        # AppDetailModal, JobDetailModal, ScriptModal,
 │       │                          # AppSearchModal, JobSearchModal
 │       ├── contexts/
 │       │   ├── PlanDataProvider.tsx   # Données statiques du plan
+│       │   ├── AuthContext.tsx        # Session (login/logout, refresh token)
 │       │   └── ThemeProvider.tsx      # Thème clair/sombre
 │       ├── hooks/
 │       │   ├── useVtomData.ts        # Fetch /api/vtom/tours
+│       │   ├── usePlanDocs.ts        # État + CRUD des calques documentaires
 │       │   ├── usePlanData.ts        # Données statiques pré-chargées
 │       │   └── useCookie.ts
 │       ├── types/
-│       │   └── vtom.ts              # Types TS (Job, ApplicationNode, etc.)
+│       │   ├── vtom.ts              # Types TS (Job, ApplicationNode, etc.)
+│       │   └── planDoc.ts           # Types calques (PlanDoc, Annotation, Arrow)
 │       ├── utils/
 │       │   ├── vtomParser.ts        # Extraction des entités depuis le JSON
-│       │   ├── vtomHelpers.ts       # Utilitaires (ressources, couleurs)
+│       │   ├── vtomHelpers.ts       # Utilitaires (ressources, couleurs) + tests
+│       │   ├── apiFetch.ts          # Wrapper fetch authentifié (Bearer + retry 401)
 │       │   ├── vtomColors.ts        # Icônes statut + adoucissement couleurs
 │       │   ├── bashHighlighter.tsx  # Coloration syntaxique bash
 │       │   └── cookies.ts
@@ -436,20 +478,35 @@ pain-main/
 
 ## 🔌 API Backend
 
-Tous les endpoints sont définis dans `back/routes/api.php` et gérés par `VtomController`.
-**Base URL :** `http://localhost:8009/api`
+Les endpoints sont définis dans `back/routes/api.php`. Toutes les routes hors
+`/health` et `/auth/*` publiques sont protégées par le middleware `auth:sanctum`.
+**Base URL (via nginx) :** `http://localhost:8080/api`
 
 ### Vue d'ensemble des routes
 
 | Méthode | Endpoint | Contrôleur | Description |
 |---------|----------|------------|-------------|
 | `GET` | `/health` | Closure | Health check général |
+| `POST` | `/auth/login` | `AuthController@login` | Authentification LDAP → token Sanctum |
+| `POST` | `/auth/refresh` | `AuthController@refresh` | Rotation du refresh token (cookie httpOnly) |
+| `POST` | `/auth/logout` | `AuthController@logout` | Révocation des tokens |
+| `GET` | `/auth/me` | `AuthController@me` | Utilisateur connecté |
 | `GET` | `/vtom/health` | `VtomController@healthCheck` | Santé du module VTOM |
-| `GET` | `/vtom/tours` | `VtomController@getTours` | Récupération du plan (avec cache) |
+| `GET` | `/vtom/tours` | `VtomController@getTours` | Récupération du plan (cache ; SSH **ou** mode local) |
 | `POST` | `/vtom/tours/refresh` | `VtomController@refreshTours` | Force le rafraîchissement |
 | `GET` | `/vtom/tours/cache` | `VtomController@getCacheInfo` | État du cache |
 | `GET` | `/vtom/script` | `VtomController@getScript` | Contenu d'un script distant |
 | `GET` | `/vtom/scripts/chaine-batch` | `VtomController@getAllChaineBatch` | Scan bulk des CHAINE_BATCH |
+| `GET` | `/plan-docs` | `DocumentationController@index` | Liste des calques documentaires |
+| `GET` | `/plan-docs/stats` | `DocumentationController@stats` | Statistiques (top calques annotés) |
+| `POST` | `/plan-docs` | `DocumentationController@store` | Créer un calque |
+| `GET` | `/plan-docs/{id}` | `DocumentationController@show` | Calque + annotations + flèches + tags |
+| `PUT` | `/plan-docs/{id}` | `DocumentationController@updateMeta` | Métadonnées (titre, description, tags) |
+| `PUT` | `/plan-docs/{id}/content` | `DocumentationController@saveContent` | Sauvegarde annotations + flèches |
+| `DELETE` | `/plan-docs/{id}` | `DocumentationController@destroy` | Supprimer un calque (cascade) |
+| `GET` | `/tags` | `DocumentationController@tags` | Liste des tags |
+
+Voir [AUTH.md](AUTH.md) pour le détail du flux d'authentification.
 
 ### `GET /api/health`
 
@@ -725,20 +782,67 @@ CSS (variables personnalisées)
 
 ---
 
+## 📝 Couche documentaire
+
+Une couche d'écriture posée **par-dessus** le plan (lecture seule). Un utilisateur
+authentifié crée des **calques** (« documentations ») dans lesquels il pose des
+**annotations** (encadrés de texte) et trace des **flèches** vers les applications
+du plan, pour capitaliser la connaissance métier.
+
+### Utilisation
+
+Sur le plan, panneau **📑 Documentation** (haut-gauche) :
+
+1. **➕ Nouveau** → nommer le calque.
+2. **✏️ Éditer**, puis choisir un outil :
+   - **📝** poser une annotation (clic sur le plan),
+   - **↗** tracer une flèche (clic sur l'annotation source, puis sur l'application cible),
+   - **🖱** déplacer une annotation (glisser) / éditer son texte (double-clic).
+3. **💾 Enregistrer** — le calque est persisté et rechargeable via le menu déroulant.
+
+### Modèle de données
+
+5 tables : `plan_docs`, `annotations`, `arrows`, `tags` + pivot `plan_doc_tag`
+(relation n-n). Détail du MCD/MLD et dictionnaire de données : **[DATA-MODEL.md](DATA-MODEL.md)**.
+
+L'auteur d'un calque est l'utilisateur **LDAP** connecté (`plan_docs.created_by`).
+Un compteur de vues par calque est tenu dans **Redis**. La sauvegarde d'un calque
+est un *replace* transactionnel (les flèches référencent les annotations par un
+`uid` client stable, résolu côté serveur).
+
+---
+
+## 🧪 Tests
+
+Trois suites, une par écosystème. Détail et cahier de tests : **[TESTS.md](TESTS.md)**.
+
+| Suite | Cible | Lancer |
+|-------|-------|--------|
+| **PHPUnit** (Feature) | Endpoints `/api/plan-docs/*`, mode local (SQLite mémoire) | `docker compose exec pain-back php artisan test` |
+| **Vitest** | Utilitaires front (`utils/`) | `cd front && npm test` |
+| **pytest** | Scripts Python (résolution chemins, CHAINE_BATCH) | `cd scripts && pytest` |
+
+`phpunit.xml` force SQLite (`force="true"` sur `DB_CONNECTION`/`DB_DATABASE`) :
+les tests ne touchent **jamais** la base PostgreSQL réelle.
+
+---
+
 ## 🚢 Déploiement
 
 ### Docker (recommandé)
 
-Trois services orchestrés par `docker-compose.yml` :
+Six services orchestrés par `docker-compose.yml` :
 
 | Service | Image | Port exposé |
 |---------|-------|-------------|
-| `pain-db` | `postgres:16` | `5432 → 5432` |
+| `pain-db` | `postgres:16` | `5435 → 5432` |
+| `pain-ldap` | `osixia/openldap:1.5.0` | *(interne uniquement)* |
+| `pain-redis` | `redis:7-alpine` | *(interne uniquement)* |
 | `pain-back` | `php:8.4-cli` + Python 3 | *(interne uniquement)* |
 | `pain-front` | `node:20-alpine` + Vite | *(interne uniquement)* |
-| `pain-nginx` | `nginx:alpine` | `80 → 80` |
+| `pain-nginx` | `nginx:alpine` | `8080 → 80` |
 
-Ordre de démarrage : `pain-db` (healthcheck `pg_isready`) → `pain-back` (migrations auto) → `pain-front` (build React) → `pain-nginx`.
+Ordre de démarrage : `pain-db`/`pain-redis` (healthchecks) + `pain-ldap` → `pain-back` (migrations auto) → `pain-front` (build React) → `pain-nginx`.
 
 ### Build
 
@@ -785,9 +889,9 @@ APP_URL=https://votre-domaine
 ### Healthchecks
 
 ```bash
-curl http://localhost:8009/api/health          # backend
-curl http://localhost:8009/api/vtom/health     # module VTOM (SSH config)
-curl http://localhost:5179                     # frontend
+curl http://localhost:8080/api/health          # backend
+curl http://localhost:8080/api/vtom/health     # module VTOM
+curl http://localhost:8080                     # frontend (via nginx)
 docker exec pain-db pg_isready -U pain  # base
 ```
 
@@ -799,7 +903,7 @@ docker exec pain-db pg_isready -U pain  # base
 
 | Problème | Solution |
 |----------|----------|
-| Frontend ne charge pas les données | Vérifier que le backend répond (`curl :8009/api/health`) et que le proxy Vite pointe vers la bonne URL |
+| Frontend ne charge pas les données | Vérifier que le backend répond (`curl :8080/api/health`) et que le proxy Vite pointe vers la bonne URL |
 | `Échec d'authentification SSH` dans les logs | Vérifier `VTOM_SSH_*` dans `back/.env` |
 | `Variables SSH manquantes` (script) | Vérifier les 8 variables `JUMP_*` et `TARGET_*` |
 | Base de données inaccessible | `docker compose ps` → vérifier que `pain-db` est `healthy` |
@@ -868,7 +972,7 @@ Projet développé pour un usage interne.
 
 ---
 
-**Dernière mise à jour :** Avril 2026
+**Dernière mise à jour :** Juillet 2026
 
 
 
